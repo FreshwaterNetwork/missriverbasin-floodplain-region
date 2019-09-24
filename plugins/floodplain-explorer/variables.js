@@ -104,7 +104,7 @@ function ( 	declare ) {
 								type:"slider",
 								field:"GDDsP",
 								label:"Growing degree days",
-								unit:"%"
+								unit:""
 							}
 						}
 					},
@@ -225,7 +225,7 @@ function ( 	declare ) {
 							info:"<b>Nutrient loading to Gulf of Mexico (nitrogen and phosphorus)</b><br>Kg/yr of nitrogen and phosphorus from within a given watershed that reaches the Gulf of Mexico, divided by watershed area in km2, all normalized to 0-100 scale. For protection priorities, identify catchments <i>lower</i> in this metric. <a href='https://sparrow.wim.usgs.gov/marb/' target='_blank'>More Info</a>"
 						}, 
 						GDDsP:{
-							values:[], vis:true, min:0, max:100, endwp:true,
+							values:[], vis:true, min:0, max:100, 
 							info:"<b>Growing degree days</b><br>Accumulated growing degree days for 2016-2017, normalized to a 0-100 scale. May be used in conjunction with &x22;local nutrient loading&x22; slider above to identify 5-year-floodplain with high loading and high growing degree days, i.e. high denitrification potential."
 						}, 
 						CPI:{
@@ -248,7 +248,7 @@ function ( 	declare ) {
 							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected return interval in 2050."
 						},
 						P2_2050:{
-							values:[], vis:true, min:0, max:200000000, nounsc:true, gtmax:true,
+							values:[], vis:true, min:0, max:200000000, nounsc:true, 
 							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						Damage_2:{
@@ -296,7 +296,7 @@ function ( 	declare ) {
 							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected return interval in 2050."
 						},
 						P2_2050:{
-							values:[], vis:true, min:0, max:1000000000, nounsc:true, gtmax:true,
+							values:[], vis:true, min:0, max:1000000000, nounsc:true, 
 							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						Damage_2:{
@@ -345,7 +345,7 @@ function ( 	declare ) {
 							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected return interval in 2050."
 						},
 						P2_2050:{
-							values:[], vis:true, min:0, max:1250000000, nounsc:true, gtmax:true,
+							values:[], vis:true, min:0, max:1250000000, nounsc:true, 
 							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						Damage_2:{
@@ -371,7 +371,7 @@ function ( 	declare ) {
 							info:"<b>Nutrient loading to Gulf of Mexico (nitrogen and phosphorus)</b><br>Kg/yr of nitrogen and phosphorus from within a given watershed that reaches the Gulf of Mexico, divided by watershed area in km2, all normalized to 0-100 scale. For restoration priorities, identify catchments <i>higher<i/> in this metric. <a href='https://sparrow.wim.usgs.gov/marb/' target='_blank'>More Info</a>"
 						}, 
 						GDDsP:{
-							values:[], vis:true, min:0, max:100,endwp:true,
+							values:[], vis:true, min:0, max:100,
 							info:"<b>Growing degree days</b><br>Accumulated growing degree days for 2016-2017, normalized to a 0-100 scale. May be used in conjunction with &x22;local nutrient loading&x22; slider above to identify 5-year-floodplain with high loading and high growing degree days, i.e. high denitrification potential."
 						}, 
 						CPI:{
@@ -395,7 +395,7 @@ function ( 	declare ) {
 							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected return interval."
 						},
 						P2_2050:{
-							values:[], vis:true, min:0, max:75000000, nounsc:true, gtmax:true,
+							values:[], vis:true, min:0, max:75000000, nounsc:true, 
 							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						Damage_2:{
@@ -444,7 +444,7 @@ function ( 	declare ) {
 							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected return interval."
 						},
 						P2_2050:{
-							values:[], vis:true, min:0,max:1000000000, nounsc:true, gtmax:true,
+							values:[], vis:true, min:0,max:1000000000, nounsc:true, 
 							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						Damage_2:{
@@ -494,7 +494,7 @@ function ( 	declare ) {
 							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected return interval."
 						},
 						P2_2050:{
-							values:[], vis:true, min:0, max:1500000000, nounsc:true, gtmax:true,
+							values:[], vis:true, min:0, max:1500000000, nounsc:true,
 							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						Damage_2:{
@@ -520,7 +520,7 @@ function ( 	declare ) {
 							info:"<b>Nutrient loading to Gulf of Mexico (nitrogen and phosphorus)</b><br>Kg/yr of nitrogen and phosphorus from within a given watershed that reaches the Gulf of Mexico, divided by watershed area in km2, all normalized to 0-100 scale. For protection priorities, identify catchments <i>lower</i> in this metric. <a href='https://sparrow.wim.usgs.gov/marb/' target='_blank'>More Info</a>"
 						}, 
 						GDDsP:{
-							values:[], vis:true, min:0, max:100, endwp:true,
+							values:[], vis:true, min:0, max:100,
 							info:"<b>Growing degree days</b><br>Accumulated growing degree days for 2016-2017, normalized to a 0-100 scale. May be used in conjunction with &x22;local nutrient loading&x22; slider above to identify 5-year-floodplain with high loading and high growing degree days, i.e. high denitrification potential."
 						}, 
 						CPI:{
@@ -543,7 +543,7 @@ function ( 	declare ) {
 							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected return interval in 2050."
 						},
 						P2_2050:{
-							values:[], vis:true, min:0, max:25000000, nounsc:true, gtmax:true,
+							values:[], vis:true, min:0, max:25000000, nounsc:true,
 							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						Damage_2:{
@@ -591,7 +591,7 @@ function ( 	declare ) {
 							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected return interval in 2050."
 						},
 						P2_2050:{
-							values:[],vis:true,min:0,max:50000000,nounsc:true, gtmax:true,
+							values:[],vis:true,min:0,max:50000000,nounsc:true,
 							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						Damage_2:{
@@ -640,7 +640,7 @@ function ( 	declare ) {
 							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected return interval in 2050."
 						},
 						P2_2050:{
-							values:[],vis:true,min:0,max:50000000,nounsc:true, gtmax:true,
+							values:[],vis:true,min:0,max:50000000,nounsc:true,
 							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						Damage_2:{
@@ -666,7 +666,7 @@ function ( 	declare ) {
 							info:"<b>Nutrient loading to Gulf of Mexico (nitrogen and phosphorus)</b><br>Kg/yr of nitrogen and phosphorus from within a given watershed that reaches the Gulf of Mexico, divided by watershed area in km2, all normalized to 0-100 scale. For restoration priorities, identify catchments <i>higher<i/> in this metric. <a href='https://sparrow.wim.usgs.gov/marb/' target='_blank'>More Info</a>"
 						}, 
 						GDDsP:{
-							values:[], vis:true, min:0, max:100,endwp:true,
+							values:[], vis:true, min:0, max:100,
 							info:"<b>Growing degree days</b><br>Accumulated growing degree days for 2016-2017, normalized to a 0-100 scale. May be used in conjunction with &x22;local nutrient loading&x22; slider above to identify 5-year-floodplain with high loading and high growing degree days, i.e. high denitrification potential."
 						}, 
 						CPI:{
@@ -690,7 +690,7 @@ function ( 	declare ) {
 							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected return interval."
 						},
 						P2_2050:{
-							values:[],vis:true,min:0,max:10000000,nounsc:true, gtmax:true,
+							values:[],vis:true,min:0,max:10000000,nounsc:true, 
 							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						Damage_2:{
@@ -739,7 +739,7 @@ function ( 	declare ) {
 							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected return interval."
 						},
 						P2_2050:{
-							values:[],vis:true,min:0,max:50000000,nounsc:true, gtmax:true,
+							values:[],vis:true,min:0,max:50000000,nounsc:true, 
 							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						Damage_2:{
@@ -789,7 +789,7 @@ function ( 	declare ) {
 							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected return interval."
 						},
 						P2_2050:{
-							values:[],vis:true,min:0,max:50000000,nounsc:true, gtmax:true,
+							values:[],vis:true,min:0,max:50000000,nounsc:true, 
 							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						Damage_2:{
@@ -815,7 +815,7 @@ function ( 	declare ) {
 							info:"<b>Nutrient loading to Gulf of Mexico (nitrogen and phosphorus)</b><br>Kg/yr of nitrogen and phosphorus from within a given watershed that reaches the Gulf of Mexico, divided by watershed area in km2, all normalized to 0-100 scale. For protection priorities, identify catchments <i>lower</i> in this metric. <a href='https://sparrow.wim.usgs.gov/marb/' target='_blank'>More Info</a>"
 						}, 
 						GDDsP:{
-							values:[], vis:true, min:0, max:100,endwp:true,
+							values:[], vis:true, min:0, max:100,
 							info:"<b>Growing degree days</b><br>Accumulated growing degree days for 2016-2017, normalized to a 0-100 scale. May be used in conjunction with &x22;local nutrient loading&x22; slider above to identify 5-year-floodplain with high loading and high growing degree days, i.e. high denitrification potential."
 						}, 
 						CPI:{
@@ -838,7 +838,7 @@ function ( 	declare ) {
 							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected return interval in 2050."
 						},
 						P2_2050:{
-							values:[], vis:true, min:10000, max:350000, nounsc:true, gtmax:true,
+							values:[], vis:true, min:10000, max:350000, nounsc:true, 
 							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						Damage_2:{
@@ -886,7 +886,7 @@ function ( 	declare ) {
 							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected return interval in 2050."
 						},
 						P2_2050:{
-							values:[], vis:true, min:10000, max:1000000, nounsc:true, gtmax:true,
+							values:[], vis:true, min:10000, max:1000000, nounsc:true, 
 							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						Damage_2:{
@@ -935,7 +935,7 @@ function ( 	declare ) {
 							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected return interval in 2050."
 						},
 						P2_2050:{
-							values:[], vis:true, min:10000, max:1000000, nounsc:true, gtmax:true,
+							values:[], vis:true, min:10000, max:1000000, nounsc:true,
 							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						Damage_2:{
@@ -961,15 +961,15 @@ function ( 	declare ) {
 							info:"<b>Nutrient loading to Gulf of Mexico (nitrogen and phosphorus)</b><br>Kg/yr of nitrogen and phosphorus from within a given watershed that reaches the Gulf of Mexico, divided by watershed area in km2, all normalized to 0-100 scale. For restoration priorities, identify catchments <i>higher<i/> in this metric. <a href='https://sparrow.wim.usgs.gov/marb/' target='_blank'>More Info</a>"
 						}, 
 						GDDsP:{
-							values:[], vis:true, min:0, max:100,endwp:true,
+							values:[], vis:true, min:0, max:100,
 							info:"<b>Growing degree days</b><br>Accumulated growing degree days for 2016-2017, normalized to a 0-100 scale. May be used in conjunction with &x22;local nutrient loading&x22; slider above to identify 5-year-floodplain with high loading and high growing degree days, i.e. high denitrification potential."
 						}, 
 						CPI:{
-							values:[],vis:true,min:0,max:0.834,step:0.001,
+							values:[], vis:true, min:0, max:0.834, step:0.001,
 							info:"<b>Agricultural Productivity Potential of Soils</b><br>An index characterizing soil's inherent capacity to produce non-irrigated commodity crops (0 - 1). Lower value suggests less productive soil, and therefore more viable opportunity for restoration."
 						}, 
 						WT_TOT:{
-							values:[],vis:true,min:0,max:8,shfld:true,
+							values:[], vis:true, min:0, max:8, shfld:true,
 							info:"<b>At-Risk Wetland Species</b><br>Total number of wetland species in catchment considered Imperiled (G1/G2) by NatureServe or threatened or endangered under the Endangered Species Act. <a href='https://enviroatlas.epa.gov/enviroatlas/DataFactSheets/pdf/ESN/Totalnumberofatriskwetlandspecies.pdf' target='_blank'></More Info</a>"
 						}, 
 						cumu_hci:{
@@ -985,7 +985,7 @@ function ( 	declare ) {
 							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected return interval."
 						},
 						P2_2050:{
-							values:[], vis:true, min:10000, max:200000, nounsc:true, gtmax:true,
+							values:[], vis:true, min:10000, max:200000, nounsc:true, 
 							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						Damage_2:{
@@ -1034,7 +1034,7 @@ function ( 	declare ) {
 							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected return interval."
 						},
 						P2_2050:{
-							values:[], vis:true, min:10000, max:1000000, nounsc:true, gtmax:true,
+							values:[], vis:true, min:10000, max:1000000, nounsc:true, 
 							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						Damage_2:{
@@ -1084,7 +1084,7 @@ function ( 	declare ) {
 							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected return interval."
 						},
 						P2_2050:{
-							values:[], vis:true, min:10000, max:1000000, nounsc:true, gtmax:true,
+							values:[], vis:true, min:10000, max:1000000, nounsc:true, 
 							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						Damage_2:{
