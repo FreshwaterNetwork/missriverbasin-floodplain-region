@@ -203,6 +203,16 @@ function ( 	declare ) {
 						}
 					}
 				}
+				// object to build supporting layers
+				t.supportingLayersObj = {
+					visible:true,
+					controls:{
+						con0:{
+							value:"3",
+							label:"100 Year Floodplain"
+						}
+					}
+				}
 
 				// definition expression root field names
 				t.exp = {
