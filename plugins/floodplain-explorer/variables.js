@@ -223,7 +223,7 @@ function ( 	declare ) {
 					// huc 8 + protection + 1 in 5 year flood
 					h8p1:{
 						Acres:{
-							values:[], vis:true, min:0, max:50000,
+							values:[], vis:true, min:0, max:50000, gtmax:true,
 							info:"<b>Available floodplain area for given return interval and management action</b><br>Area of floodplain in forest, wetland, or grassland that is not currently in protected status."
 						}, 
 						ACCp:{
@@ -250,15 +250,15 @@ function ( 	declare ) {
 							info:"<b>National Fish Habitat Partnership Cumulative Habitat Condition Index</b><br>Degree to which anthropogenic stressors in the watershed may be affecting fish habitat. Higher value = less extreme stressors. For protection priorities, identify catchments <i>higher</i> in this metric, i.e. with less extreme stressors. <a href='http://assessment.fishhabitat.org/#578a9a48e4b0c1aacab8976c/578a99f4e4b0c1aacab89699' target='_blank'>More Info</a>"
 						}, 
 						popnow:{
-							values:[], vis:true, min:0, max:151,
+							values:[], vis:true, min:0, max:151, gtmax:true,
 							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in forest/wetland floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
-							values:[], vis:true, min:0, max:3501,
+							values:[], vis:true, min:0, max:3501, gtmax:true,
 							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected return interval in 2050. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
-							values:[], vis:true, min:0, max:200000000, 
+							values:[], vis:true, min:0, max:200000000, gtmax:true, 
 							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						Damage_2:{
@@ -272,7 +272,7 @@ function ( 	declare ) {
 					// huc 8 + protection + 1 in 100 year flood
 					h8p2:{
 						Acres:{
-							values:[], vis:true, min:0, max:200000,
+							values:[], vis:true, min:0, max:200000, gtmax:true,
 							info:"<b>Available floodplain area for given return interval and management action</b><br>Area of floodplain in forest, wetland, or grassland that is not currently in protected status."
 						},
 						ACCp:{
@@ -298,15 +298,15 @@ function ( 	declare ) {
 							info:"<b>National Fish Habitat Partnership Cumulative Habitat Condition Index</b><br>Degree to which anthropogenic stressors in the watershed may be affecting fish habitat. Higher value = less extreme stressors. For protection priorities, identify catchments <i>higher</i> in this metric, i.e. with less extreme stressors. <a href='http://assessment.fishhabitat.org/#578a9a48e4b0c1aacab8976c/578a99f4e4b0c1aacab89699' target='_blank'>More Info</a>"
 						}, 
 						popnow:{
-							values:[], vis:true, min:0, max:251,
+							values:[], vis:true, min:0, max:251, gtmax:true,
 							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in forest/wetland floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
-							values:[], vis:true, min:0, max:8501,
+							values:[], vis:true, min:0, max:8501, gtmax:true,
 							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected return interval in 2050. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
-							values:[], vis:true, min:0, max:1000000000, 
+							values:[], vis:true, min:0, max:1000000000, gtmax:true,
 							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						Damage_2:{
@@ -321,7 +321,7 @@ function ( 	declare ) {
 					// huc 8 + protection + 1 in 500 year flood
 					h8p3:{
 						Acres:{
-							values:[], vis:true, min:0,	max:200000,
+							values:[], vis:true, min:0,	max:200000, gtmax:true,
 							info:"<b>Available floodplain area for given return interval and management action</b><br>Area of floodplain in forest, wetland, or grassland that is not currently in protected status."
 						}, 
 						ACCp:{
@@ -347,15 +347,15 @@ function ( 	declare ) {
 							info:"<b>National Fish Habitat Partnership Cumulative Habitat Condition Index</b><br>Degree to which anthropogenic stressors in the watershed may be affecting fish habitat. Higher value = less extreme stressors. For protection priorities, identify catchments <i>higher</i> in this metric, i.e. with less extreme stressors. <a href='http://assessment.fishhabitat.org/#578a9a48e4b0c1aacab8976c/578a99f4e4b0c1aacab89699' target='_blank'>More Info</a>"
 						}, 
 						popnow:{
-							values:[], vis:true, min:0, max:301,
+							values:[], vis:true, min:0, max:301, gtmax:true,
 							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in forest/wetland floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
-							values:[], vis:true, min:0, max:10001,
+							values:[], vis:true, min:0, max:10001, gtmax:true,
 							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected return interval in 2050. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
-							values:[], vis:true, min:0, max:1250000000, 
+							values:[], vis:true, min:0, max:1250000000, gtmax:true, 
 							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						Damage_2:{
@@ -369,7 +369,7 @@ function ( 	declare ) {
 					// huc 8 + restoration + 1 in 5 year flood
 					h8r1:{
 						Acres:{
-							values:[], vis:true, min:0, max:40000,
+							values:[], vis:true, min:0, max:40000, gtmax:true,
 							info:"<b>Available floodplain area for given return interval and management action</b><br>Area of floodplain in ag or pasture land that could potentially be restored"
 						}, 
 						ACCp:{
@@ -397,15 +397,15 @@ function ( 	declare ) {
 							info:"<b>National Fish Habitat Partnership Cumulative Habitat Condition Index</b><br>Degree to which anthropogenic stressors in the watershed may be affecting fish habitat. Higher value = less extreme stressors. For restoration priorities, identify catchments <i>lower</i> in this metric, i.e. with more extreme stressors. <a href='http://assessment.fishhabitat.org/#578a9a48e4b0c1aacab8976c/578a99f4e4b0c1aacab89699' target='_blank'>More Info</a>"
 						}, 
 						popnow:{
-							values:[], vis:true, min:0, max:151,
+							values:[], vis:true, min:0, max:151, gtmax:true,
 							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
-							values:[], vis:true, min:0, max:3001,
+							values:[], vis:true, min:0, max:3001, gtmax:true,
 							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
-							values:[], vis:true, min:0, max:75000000, 
+							values:[], vis:true, min:0, max:75000000, gtmax:true, 
 							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						Damage_2:{
@@ -419,7 +419,7 @@ function ( 	declare ) {
 					// huc 8 + restoration + 1 in 100 year flood
 					h8r2:{
 						Acres:{
-							values:[], vis:true, min:0, max:300000,
+							values:[], vis:true, min:0, max:300000, gtmax:true,
 							info:"<b>Available floodplain area for given return interval and management action</b><br>Area of floodplain in ag or pasture land that could potentially be restored"
 						}, 
 						ACCp:{
@@ -446,15 +446,15 @@ function ( 	declare ) {
 							info:"<b>National Fish Habitat Partnership Cumulative Habitat Condition Index</b><br>Degree to which anthropogenic stressors in the watershed may be affecting fish habitat. Higher value = less extreme stressors. For restoration priorities, identify catchments <i>lower</i> in this metric, i.e. with more extreme stressors. <a href='http://assessment.fishhabitat.org/#578a9a48e4b0c1aacab8976c/578a99f4e4b0c1aacab89699' target='_blank'>More Info</a>"
 						}, 
 						popnow:{
-							values:[], vis:true, min:0, max:351,
+							values:[], vis:true, min:0, max:351, gtmax:true,
 							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
-							values:[], vis:true, min:0, max:15001,
+							values:[], vis:true, min:0, max:15001, gtmax:true,
 							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
-							values:[], vis:true, min:0, max:1000000000, 
+							values:[], vis:true, min:0, max:1000000000, gtmax:true, 
 							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						Damage_2:{
@@ -469,7 +469,7 @@ function ( 	declare ) {
 					// huc 8 + restoration + 1 in 500 year flood
 					h8r3:{
 						Acres:{
-							values:[], vis:true, min:0, max:500000,
+							values:[], vis:true, min:0, max:500000, gtmax:true,
 							info:"<b>Available floodplain area for given return interval and management action</b><br>Area of floodplain in ag or pasture land that could potentially be restored"
 						}, 
 						ACCp:{
@@ -496,15 +496,15 @@ function ( 	declare ) {
 							info:"<b>National Fish Habitat Partnership Cumulative Habitat Condition Index</b><br>Degree to which anthropogenic stressors in the watershed may be affecting fish habitat. Higher value = less extreme stressors. For restoration priorities, identify catchments <i>lower</i> in this metric, i.e. with more extreme stressors. <a href='http://assessment.fishhabitat.org/#578a9a48e4b0c1aacab8976c/578a99f4e4b0c1aacab89699' target='_blank'>More Info</a>"
 						}, 
 						popnow:{
-							values:[], vis:true, min:0, max:501,
+							values:[], vis:true, min:0, max:501, gtmax:true,
 							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
-							values:[], vis:true, min:0, max:20001,
+							values:[], vis:true, min:0, max:20001, gtmax:true,
 							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
-							values:[], vis:true, min:0, max:1500000000,
+							values:[], vis:true, min:0, max:1500000000, gtmax:true,
 							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						Damage_2:{
@@ -518,7 +518,7 @@ function ( 	declare ) {
 					// huc 12 + protection + 1 in 5 year flood
 					h12p1:{
 						Acres:{
-							values:[], vis:true, min:0, max:2500,
+							values:[], vis:true, min:0, max:2500, gtmax:true,
 							info:"<b>Available floodplain area for given return interval and management action</b><br>Area of floodplain in forest, wetland, or grassland that is not currently in protected status."
 						}, 
 						ACCp:{
@@ -545,15 +545,15 @@ function ( 	declare ) {
 							info:"<b>National Fish Habitat Partnership Cumulative Habitat Condition Index</b><br>Degree to which anthropogenic stressors in the watershed may be affecting fish habitat. Higher value = less extreme stressors. For protection priorities, identify catchments <i>higher</i> in this metric, i.e. with less extreme stressors. <a href='http://assessment.fishhabitat.org/#578a9a48e4b0c1aacab8976c/578a99f4e4b0c1aacab89699' target='_blank'>More Info</a>"
 						}, 
 						popnow:{
-							values:[], vis:true, min:0, max:11,
+							values:[], vis:true, min:0, max:11, gtmax:true,
 							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in forest/wetland floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
-							values:[], vis:true, min:0, max:501,
+							values:[], vis:true, min:0, max:501, gtmax:true,
 							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected return interval in 2050. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
-							values:[], vis:true, min:0, max:25000000,
+							values:[], vis:true, min:0, max:25000000, gtmax:true,
 							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						Damage_2:{
@@ -567,7 +567,7 @@ function ( 	declare ) {
 					// huc 12 + protection + 1 in 100 year flood
 					h12p2:{
 						Acres:{
-							values:[], vis:true, min:0, max:2500,
+							values:[], vis:true, min:0, max:2500, gtmax:true,
 							info:"<b>Available floodplain area for given return interval and management action</b><br>Area of floodplain in forest, wetland, or grassland that is not currently in protected status."
 						}, 
 						ACCp:{
@@ -593,15 +593,15 @@ function ( 	declare ) {
 							info:"<b>National Fish Habitat Partnership Cumulative Habitat Condition Index</b><br>Degree to which anthropogenic stressors in the watershed may be affecting fish habitat. Higher value = less extreme stressors. For protection priorities, identify catchments <i>higher</i> in this metric, i.e. with less extreme stressors. <a href='http://assessment.fishhabitat.org/#578a9a48e4b0c1aacab8976c/578a99f4e4b0c1aacab89699' target='_blank'>More Info</a>"
 						}, 
 						popnow:{
-							values:[], vis:true, min:0, max:11,
+							values:[], vis:true, min:0, max:11, gtmax:true,
 							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in forest/wetland floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
-							values:[], vis:true, min:0, max:1001,
+							values:[], vis:true, min:0, max:1001, gtmax:true,
 							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected return interval in 2050. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
-							values:[], vis:true, min:0, max:50000000,
+							values:[], vis:true, min:0, max:50000000, gtmax:true,
 							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						Damage_2:{
@@ -616,7 +616,7 @@ function ( 	declare ) {
 					// huc 12 + protection + 1 in 500 year flood
 					h12p3:{
 						Acres:{
-							values:[], vis:true, min:0, max:2500,
+							values:[], vis:true, min:0, max:2500, gtmax:true,
 							info:"<b>Available floodplain area for given return interval and management action</b><br>Area of floodplain in forest, wetland, or grassland that is not currently in protected status."
 						}, 
 						ACCp:{
@@ -642,15 +642,15 @@ function ( 	declare ) {
 							info:"<b>National Fish Habitat Partnership Cumulative Habitat Condition Index</b><br>Degree to which anthropogenic stressors in the watershed may be affecting fish habitat. Higher value = less extreme stressors. For protection priorities, identify catchments <i>higher</i> in this metric, i.e. with less extreme stressors. <a href='http://assessment.fishhabitat.org/#578a9a48e4b0c1aacab8976c/578a99f4e4b0c1aacab89699' target='_blank'>More Info</a>"
 						}, 
 						popnow:{
-							values:[], vis:true, min:0, max:11,
+							values:[], vis:true, min:0, max:11, gtmax:true,
 							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in forest/wetland floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
-							values:[], vis:true, min:0, max:1001,
+							values:[], vis:true, min:0, max:1001, gtmax:true,
 							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected return interval in 2050. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
-							values:[], vis:true, min:0, max:50000000,
+							values:[], vis:true, min:0, max:50000000, gtmax:true,
 							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						Damage_2:{
@@ -664,7 +664,7 @@ function ( 	declare ) {
 					// huc 12 + restoration + 1 in 5 year flood
 					h12r1:{
 						Acres:{
-							values:[], vis:true, min:0, max:2500,
+							values:[], vis:true, min:0, max:2500, gtmax:true,
 							info:"<b>Available floodplain area for given return interval and management action</b><br>Area of floodplain in ag or pasture land that could potentially be restored"
 						}, 
 						ACCp:{
@@ -692,15 +692,15 @@ function ( 	declare ) {
 							info:"<b>National Fish Habitat Partnership Cumulative Habitat Condition Index</b><br>Degree to which anthropogenic stressors in the watershed may be affecting fish habitat. Higher value = less extreme stressors. For restoration priorities, identify catchments <i>lower</i> in this metric, i.e. with more extreme stressors. <a href='http://assessment.fishhabitat.org/#578a9a48e4b0c1aacab8976c/578a99f4e4b0c1aacab89699' target='_blank'>More Info</a>"
 						}, 
 						popnow:{
-							values:[], vis:true, min:0, max:11,
+							values:[], vis:true, min:0, max:11, gtmax:true,
 							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
-							values:[], vis:true, min:0, max:501,
+							values:[], vis:true, min:0, max:501, gtmax:true,
 							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
-							values:[], vis:true, min:0, max:10000000, 
+							values:[], vis:true, min:0, max:10000000, gtmax:true, 
 							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						Damage_2:{
@@ -714,7 +714,7 @@ function ( 	declare ) {
 					// huc 12 + restoration + 1 in 100 year flood
 					h12r2:{
 						Acres:{
-							values:[], vis:true, min:0, max:6000,
+							values:[], vis:true, min:0, max:6000, gtmax:true,
 							info:"<b>Available floodplain area for given return interval and management action</b><br>Area of floodplain in ag or pasture land that could potentially be restored"
 						}, 
 						ACCp:{
@@ -741,15 +741,15 @@ function ( 	declare ) {
 							info:"<b>National Fish Habitat Partnership Cumulative Habitat Condition Index</b><br>Degree to which anthropogenic stressors in the watershed may be affecting fish habitat. Higher value = less extreme stressors. For restoration priorities, identify catchments <i>lower</i> in this metric, i.e. with more extreme stressors. <a href='http://assessment.fishhabitat.org/#578a9a48e4b0c1aacab8976c/578a99f4e4b0c1aacab89699' target='_blank'>More Info</a>"
 						}, 
 						popnow:{
-							values:[], vis:true, min:0, max:26,
+							values:[], vis:true, min:0, max:26, gtmax:true,
 							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
-							values:[], vis:true, min:0, max:1501,
+							values:[], vis:true, min:0, max:1501, gtmax:true,
 							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
-							values:[], vis:true, min:0, max:50000000, 
+							values:[], vis:true, min:0, max:50000000, gtmax:true,
 							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						Damage_2:{
@@ -764,7 +764,7 @@ function ( 	declare ) {
 					// huc 12 + restoration + 1 in 500 year flood
 					h12r3:{
 						Acres:{
-							values:[], vis:true, min:0, max:15000,
+							values:[], vis:true, min:0, max:15000, gtmax:true,
 							info:"<b>Available floodplain area for given return interval and management action</b><br>Area of floodplain in ag or pasture land that could potentially be restored"
 						}, 
 						ACCp:{
@@ -791,15 +791,15 @@ function ( 	declare ) {
 							info:"<b>National Fish Habitat Partnership Cumulative Habitat Condition Index</b><br>Degree to which anthropogenic stressors in the watershed may be affecting fish habitat. Higher value = less extreme stressors. For restoration priorities, identify catchments <i>lower</i> in this metric, i.e. with more extreme stressors. <a href='http://assessment.fishhabitat.org/#578a9a48e4b0c1aacab8976c/578a99f4e4b0c1aacab89699' target='_blank'>More Info</a>"
 						}, 
 						popnow:{
-							values:[], vis:true, min:0, max:26,
+							values:[], vis:true, min:0, max:26, gtmax:true,
 							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
-							values:[], vis:true, min:0, max:1501,
+							values:[], vis:true, min:0, max:1501, gtmax:true,
 							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
-							values:[], vis:true, min:0, max:50000000, 
+							values:[], vis:true, min:0, max:50000000, gtmax:true,
 							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						Damage_2:{
@@ -813,7 +813,7 @@ function ( 	declare ) {
 					// catchment + protection + 1 in 5 year flood
 					catchp1:{
 						Acres:{
-							values:[], vis:true, min:10, max:250,
+							values:[], vis:true, min:10, max:250, gtmax:true,
 							info:"<b>Available floodplain area for given return interval and management action</b><br>Area of floodplain in forest, wetland, or grassland that is not currently in protected status."
 						}, 
 						ACCp:{
@@ -840,15 +840,15 @@ function ( 	declare ) {
 							info:"<b>National Fish Habitat Partnership Cumulative Habitat Condition Index</b><br>Degree to which anthropogenic stressors in the watershed may be affecting fish habitat. Higher value = less extreme stressors. For protection priorities, identify catchments <i>higher</i> in this metric, i.e. with less extreme stressors. <a href='http://assessment.fishhabitat.org/#578a9a48e4b0c1aacab8976c/578a99f4e4b0c1aacab89699' target='_blank'>More Info</a>"
 						}, 
 						popnow:{
-							values:[], vis:true, min:1, max:11,
+							values:[], vis:true, min:1, max:11, gtmax:true,
 							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in forest/wetland floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
-							values:[], vis:true, min:1, max:501,
+							values:[], vis:true, min:1, max:501, gtmax:true,
 							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected return interval in 2050. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
-							values:[], vis:true, min:10000, max:350000, 
+							values:[], vis:true, min:10000, max:350000, gtmax:true, 
 							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						Damage_2:{
@@ -862,7 +862,7 @@ function ( 	declare ) {
 					// catchment + protection + 1 in 100 year flood
 					catchp2:{
 						Acres:{
-							values:[], vis:true, min:10, max:250,
+							values:[], vis:true, min:10, max:250, gtmax:true,
 							info:"<b>Available floodplain area for given return interval and management action</b><br>Area of floodplain in forest, wetland, or grassland that is not currently in protected status."
 						}, 
 						ACCp:{
@@ -888,15 +888,15 @@ function ( 	declare ) {
 							info:"<b>National Fish Habitat Partnership Cumulative Habitat Condition Index</b><br>Degree to which anthropogenic stressors in the watershed may be affecting fish habitat. Higher value = less extreme stressors. For protection priorities, identify catchments <i>higher</i> in this metric, i.e. with less extreme stressors. <a href='http://assessment.fishhabitat.org/#578a9a48e4b0c1aacab8976c/578a99f4e4b0c1aacab89699' target='_blank'>More Info</a>"
 						}, 
 						popnow:{
-							values:[], vis:true, min:1, max:11,
+							values:[], vis:true, min:1, max:11, gtmax:true,
 							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in forest/wetland floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
-							values:[], vis:true, min:1, max:501,
+							values:[], vis:true, min:1, max:501, gtmax:true,
 							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected return interval in 2050. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
-							values:[], vis:true, min:10000, max:1000000, 
+							values:[], vis:true, min:10000, max:1000000, gtmax:true, 
 							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						Damage_2:{
@@ -911,7 +911,7 @@ function ( 	declare ) {
 					// catchment + protection + 1 in 500 year flood
 					catchp3:{
 						Acres:{
-							values:[], vis:true, min:10, max:250,
+							values:[], vis:true, min:10, max:250, gtmax:true,
 							info:"<b>Available floodplain area for given return interval and management action</b><br>Area of floodplain in forest, wetland, or grassland that is not currently in protected status."
 						}, 
 						ACCp:{
@@ -937,15 +937,15 @@ function ( 	declare ) {
 							info:"<b>National Fish Habitat Partnership Cumulative Habitat Condition Index</b><br>Degree to which anthropogenic stressors in the watershed may be affecting fish habitat. Higher value = less extreme stressors. For protection priorities, identify catchments <i>higher</i> in this metric, i.e. with less extreme stressors. <a href='http://assessment.fishhabitat.org/#578a9a48e4b0c1aacab8976c/578a99f4e4b0c1aacab89699' target='_blank'>More Info</a>"
 						}, 
 						popnow:{
-							values:[], vis:true, min:1, max:11,
+							values:[], vis:true, min:1, max:11, gtmax:true,
 							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in forest/wetland floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
-							values:[], vis:true, min:1, max:501,
+							values:[], vis:true, min:1, max:501, gtmax:true,
 							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected return interval in 2050. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
-							values:[], vis:true, min:10000, max:1000000,
+							values:[], vis:true, min:10000, max:1000000, gtmax:true,
 							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						Damage_2:{
@@ -959,7 +959,7 @@ function ( 	declare ) {
 					// catchment + restoration + 1 in 5 year flood
 					catchr1:{
 						Acres:{
-							values:[], vis:true, min:10, max:250,
+							values:[], vis:true, min:10, max:250, gtmax:true,
 							info:"<b>Available floodplain area for given return interval and management action</b><br>Area of floodplain in ag or pasture land that could potentially be restored"
 						}, 
 						ACCp:{
@@ -987,15 +987,15 @@ function ( 	declare ) {
 							info:"<b>National Fish Habitat Partnership Cumulative Habitat Condition Index</b><br>Degree to which anthropogenic stressors in the watershed may be affecting fish habitat. Higher value = less extreme stressors. For restoration priorities, identify catchments <i>lower</i> in this metric, i.e. with more extreme stressors. <a href='http://assessment.fishhabitat.org/#578a9a48e4b0c1aacab8976c/578a99f4e4b0c1aacab89699' target='_blank'>More Info</a>"
 						}, 
 						popnow:{
-							values:[], vis:true, min:1, max:11,
+							values:[], vis:true, min:1, max:11, gtmax:true,
 							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
-							values:[], vis:true, min:1, max:501,
+							values:[], vis:true, min:1, max:501, gtmax:true,
 							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
-							values:[], vis:true, min:10000, max:200000, 
+							values:[], vis:true, min:10000, max:200000, gtmax:true, 
 							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						Damage_2:{
@@ -1009,7 +1009,7 @@ function ( 	declare ) {
 					// catchment + restoration + 1 in 100 year flood
 					catchr2:{
 						Acres:{
-							values:[], vis:true, min:10, max:250,
+							values:[], vis:true, min:10, max:250, gtmax:true,
 							info:"<b>Available floodplain area for given return interval and management action</b><br>Area of floodplain in ag or pasture land that could potentially be restored"
 						}, 
 						ACCp:{
@@ -1036,15 +1036,15 @@ function ( 	declare ) {
 							info:"<b>National Fish Habitat Partnership Cumulative Habitat Condition Index</b><br>Degree to which anthropogenic stressors in the watershed may be affecting fish habitat. Higher value = less extreme stressors. For restoration priorities, identify catchments <i>lower</i> in this metric, i.e. with more extreme stressors. <a href='http://assessment.fishhabitat.org/#578a9a48e4b0c1aacab8976c/578a99f4e4b0c1aacab89699' target='_blank'>More Info</a>"
 						}, 
 						popnow:{
-							values:[], vis:true, min:1, max:11,
+							values:[], vis:true, min:1, max:11, gtmax:true,
 							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
-							values:[], vis:true, min:1, max:501,
+							values:[], vis:true, min:1, max:501, gtmax:true,
 							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
-							values:[], vis:true, min:10000, max:1000000, 
+							values:[], vis:true, min:10000, max:1000000, gtmax:true, 
 							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						Damage_2:{
@@ -1059,7 +1059,7 @@ function ( 	declare ) {
 					// catchment + restoration + 1 in 500 year flood
 					catchr3:{
 						Acres:{
-							values:[], vis:true, min:10, max:250,
+							values:[], vis:true, min:10, max:250, gtmax:true,
 							info:"<b>Available floodplain area for given return interval and management action</b><br>Area of floodplain in ag or pasture land that could potentially be restored"
 						}, 
 						ACCp:{
@@ -1086,15 +1086,15 @@ function ( 	declare ) {
 							info:"<b>National Fish Habitat Partnership Cumulative Habitat Condition Index</b><br>Degree to which anthropogenic stressors in the watershed may be affecting fish habitat. Higher value = less extreme stressors. For restoration priorities, identify catchments <i>lower</i> in this metric, i.e. with more extreme stressors. <a href='http://assessment.fishhabitat.org/#578a9a48e4b0c1aacab8976c/578a99f4e4b0c1aacab89699' target='_blank'>More Info</a>"
 						}, 
 						popnow:{
-							values:[], vis:true, min:1, max:11,
+							values:[], vis:true, min:1, max:11, gtmax:true,
 							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
-							values:[], vis:true, min:1, max:501,
+							values:[], vis:true, min:1, max:501, gtmax:true,
 							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
-							values:[], vis:true, min:10000, max:1000000, 
+							values:[], vis:true, min:10000, max:1000000, gtmax:true, 
 							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						Damage_2:{
