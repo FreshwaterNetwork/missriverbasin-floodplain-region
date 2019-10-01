@@ -243,7 +243,7 @@ function ( 	declare ) {
 						}, 
 						WT_TOT:{
 							values:[], vis:true, min:0, max:75, shfld:true,
-							info:"<b>At-Risk Wetland Species</b><br>Total number of wetland species in catchment considered Imperiled (G1/G2) by NatureServe or threatened or endangered under the Endangered Species Act. <a href='https://enviroatlas.epa.gov/enviroatlas/DataFactSheets/pdf/ESN/Totalnumberofatriskwetlandspecies.pdf' target='_blank'></More Info</a>"
+							info:"<b>At-Risk Wetland Species</b><br>Total number of wetland species in catchment considered Imperiled (G1/G2) by NatureServe or threatened or endangered under the Endangered Species Act. <a href='https://enviroatlas.epa.gov/enviroatlas/DataFactSheets/pdf/ESN/Totalnumberofatriskwetlandspecies.pdf' target='_blank'>More Info</a>"
 						}, 
 						cumu_hci:{
 							values:[], vis:true, min:1.223, max:4.385, step:0.001, shfld:true,
@@ -251,11 +251,11 @@ function ( 	declare ) {
 						}, 
 						popnow:{
 							values:[], vis:true, min:0, max:151,
-							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in forest/wetland floodplain of the selected return interval."
+							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in forest/wetland floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
 							values:[], vis:true, min:0, max:3501,
-							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected return interval in 2050."
+							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected return interval in 2050. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
 							values:[], vis:true, min:0, max:200000000, 
@@ -291,7 +291,7 @@ function ( 	declare ) {
 						}, 
 						WT_TOT:{
 							values:[], vis:true, min:0, max:75, shfld:true,
-							info:"<b>At-Risk Wetland Species</b><br>Total number of wetland species in catchment considered Imperiled (G1/G2) by NatureServe or threatened or endangered under the Endangered Species Act. <a href='https://enviroatlas.epa.gov/enviroatlas/DataFactSheets/pdf/ESN/Totalnumberofatriskwetlandspecies.pdf' target='_blank'></More Info</a>"
+							info:"<b>At-Risk Wetland Species</b><br>Total number of wetland species in catchment considered Imperiled (G1/G2) by NatureServe or threatened or endangered under the Endangered Species Act. <a href='https://enviroatlas.epa.gov/enviroatlas/DataFactSheets/pdf/ESN/Totalnumberofatriskwetlandspecies.pdf' target='_blank'>More Info</a>"
 						}, 
 						cumu_hci:{
 							values:[], vis:true, min:1.223, max:4.385, step:0.001, shfld:true,
@@ -299,11 +299,11 @@ function ( 	declare ) {
 						}, 
 						popnow:{
 							values:[], vis:true, min:0, max:251,
-							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in forest/wetland floodplain of the selected return interval."
+							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in forest/wetland floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
 							values:[], vis:true, min:0, max:8501,
-							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected return interval in 2050."
+							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected return interval in 2050. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
 							values:[], vis:true, min:0, max:1000000000, 
@@ -340,7 +340,7 @@ function ( 	declare ) {
 						}, 
 						WT_TOT:{
 							values:[], vis:true, min:0, max:75, shfld:true,
-							info:"<b>At-Risk Wetland Species</b><br>Total number of wetland species in catchment considered Imperiled (G1/G2) by NatureServe or threatened or endangered under the Endangered Species Act. <a href='https://enviroatlas.epa.gov/enviroatlas/DataFactSheets/pdf/ESN/Totalnumberofatriskwetlandspecies.pdf' target='_blank'></More Info</a>"
+							info:"<b>At-Risk Wetland Species</b><br>Total number of wetland species in catchment considered Imperiled (G1/G2) by NatureServe or threatened or endangered under the Endangered Species Act. <a href='https://enviroatlas.epa.gov/enviroatlas/DataFactSheets/pdf/ESN/Totalnumberofatriskwetlandspecies.pdf' target='_blank'>More Info</a>"
 						}, 
 						cumu_hci:{
 							values:[], vis:true, min:1.223, max:4.385, step:0.001, shfld:true,
@@ -348,11 +348,11 @@ function ( 	declare ) {
 						}, 
 						popnow:{
 							values:[], vis:true, min:0, max:301,
-							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in forest/wetland floodplain of the selected return interval."
+							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in forest/wetland floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
 							values:[], vis:true, min:0, max:10001,
-							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected return interval in 2050."
+							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected return interval in 2050. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
 							values:[], vis:true, min:0, max:1250000000, 
@@ -390,7 +390,7 @@ function ( 	declare ) {
 						}, 
 						WT_TOT:{
 							values:[], vis:true, min:0, max:75, shfld:true,
-							info:"<b>At-Risk Wetland Species</b><br>Total number of wetland species in catchment considered Imperiled (G1/G2) by NatureServe or threatened or endangered under the Endangered Species Act. <a href='https://enviroatlas.epa.gov/enviroatlas/DataFactSheets/pdf/ESN/Totalnumberofatriskwetlandspecies.pdf' target='_blank'></More Info</a>"
+							info:"<b>At-Risk Wetland Species</b><br>Total number of wetland species in catchment considered Imperiled (G1/G2) by NatureServe or threatened or endangered under the Endangered Species Act. <a href='https://enviroatlas.epa.gov/enviroatlas/DataFactSheets/pdf/ESN/Totalnumberofatriskwetlandspecies.pdf' target='_blank'>More Info</a>"
 						}, 
 						cumu_hci:{
 							values:[], vis:true, min:1.224, max:4.385, step:0.001, shfld:true,
@@ -398,11 +398,11 @@ function ( 	declare ) {
 						}, 
 						popnow:{
 							values:[], vis:true, min:0, max:151,
-							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in ag or pasture land that is in a floodplain of the selected return interval."
+							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
 							values:[], vis:true, min:0, max:3001,
-							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected return interval."
+							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
 							values:[], vis:true, min:0, max:75000000, 
@@ -439,7 +439,7 @@ function ( 	declare ) {
 						}, 
 						WT_TOT:{
 							values:[], vis:true, min:0, max:75, shfld:true,
-							info:"<b>At-Risk Wetland Species</b><br>Total number of wetland species in catchment considered Imperiled (G1/G2) by NatureServe or threatened or endangered under the Endangered Species Act. <a href='https://enviroatlas.epa.gov/enviroatlas/DataFactSheets/pdf/ESN/Totalnumberofatriskwetlandspecies.pdf' target='_blank'></More Info</a>"
+							info:"<b>At-Risk Wetland Species</b><br>Total number of wetland species in catchment considered Imperiled (G1/G2) by NatureServe or threatened or endangered under the Endangered Species Act. <a href='https://enviroatlas.epa.gov/enviroatlas/DataFactSheets/pdf/ESN/Totalnumberofatriskwetlandspecies.pdf' target='_blank'>More Info</a>"
 						}, 
 						cumu_hci:{
 							values:[], vis:true, min:1.223, max:4.385, step:0.001, shfld:true,
@@ -447,11 +447,11 @@ function ( 	declare ) {
 						}, 
 						popnow:{
 							values:[], vis:true, min:0, max:351,
-							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in ag or pasture land that is in a floodplain of the selected return interval."
+							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
 							values:[], vis:true, min:0, max:15001,
-							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected return interval."
+							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
 							values:[], vis:true, min:0, max:1000000000, 
@@ -489,7 +489,7 @@ function ( 	declare ) {
 						}, 
 						WT_TOT:{
 							values:[], vis:true, min:0, max:75, shfld:true,
-							info:"<b>At-Risk Wetland Species</b><br>Total number of wetland species in catchment considered Imperiled (G1/G2) by NatureServe or threatened or endangered under the Endangered Species Act. <a href='https://enviroatlas.epa.gov/enviroatlas/DataFactSheets/pdf/ESN/Totalnumberofatriskwetlandspecies.pdf' target='_blank'></More Info</a>"
+							info:"<b>At-Risk Wetland Species</b><br>Total number of wetland species in catchment considered Imperiled (G1/G2) by NatureServe or threatened or endangered under the Endangered Species Act. <a href='https://enviroatlas.epa.gov/enviroatlas/DataFactSheets/pdf/ESN/Totalnumberofatriskwetlandspecies.pdf' target='_blank'>More Info</a>"
 						}, 
 						cumu_hci:{
 							values:[], vis:true, min:1.224, max:4.385, step:0.001, shfld:true,
@@ -497,11 +497,11 @@ function ( 	declare ) {
 						}, 
 						popnow:{
 							values:[], vis:true, min:0, max:501,
-							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in ag or pasture land that is in a floodplain of the selected return interval."
+							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
 							values:[], vis:true, min:0, max:20001,
-							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected return interval."
+							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
 							values:[], vis:true, min:0, max:1500000000,
@@ -538,7 +538,7 @@ function ( 	declare ) {
 						}, 
 						WT_TOT:{
 							values:[], vis:true, min:0, max:8, shfld:true,
-							info:"<b>At-Risk Wetland Species</b><br>Total number of wetland species in catchment considered Imperiled (G1/G2) by NatureServe or threatened or endangered under the Endangered Species Act. <a href='https://enviroatlas.epa.gov/enviroatlas/DataFactSheets/pdf/ESN/Totalnumberofatriskwetlandspecies.pdf' target='_blank'></More Info</a>"
+							info:"<b>At-Risk Wetland Species</b><br>Total number of wetland species in catchment considered Imperiled (G1/G2) by NatureServe or threatened or endangered under the Endangered Species Act. <a href='https://enviroatlas.epa.gov/enviroatlas/DataFactSheets/pdf/ESN/Totalnumberofatriskwetlandspecies.pdf' target='_blank'>More Info</a>"
 						}, 
 						cumu_hci:{
 							values:[], vis:true, min:0.999, max:5.001, step:0.001, shfld:true,
@@ -546,11 +546,11 @@ function ( 	declare ) {
 						}, 
 						popnow:{
 							values:[], vis:true, min:0, max:11,
-							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in forest/wetland floodplain of the selected return interval."
+							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in forest/wetland floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
 							values:[], vis:true, min:0, max:501,
-							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected return interval in 2050."
+							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected return interval in 2050. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
 							values:[], vis:true, min:0, max:25000000,
@@ -586,7 +586,7 @@ function ( 	declare ) {
 						}, 
 						WT_TOT:{
 							values:[], vis:true, min:0, max:8, shfld:true,
-							info:"<b>At-Risk Wetland Species</b><br>Total number of wetland species in catchment considered Imperiled (G1/G2) by NatureServe or threatened or endangered under the Endangered Species Act. <a href='https://enviroatlas.epa.gov/enviroatlas/DataFactSheets/pdf/ESN/Totalnumberofatriskwetlandspecies.pdf' target='_blank'></More Info</a>"
+							info:"<b>At-Risk Wetland Species</b><br>Total number of wetland species in catchment considered Imperiled (G1/G2) by NatureServe or threatened or endangered under the Endangered Species Act. <a href='https://enviroatlas.epa.gov/enviroatlas/DataFactSheets/pdf/ESN/Totalnumberofatriskwetlandspecies.pdf' target='_blank'>More Info</a>"
 						}, 
 						cumu_hci:{
 							values:[], vis:true, min:0.999, max:5.001, step:0.001, shfld:true,
@@ -594,11 +594,11 @@ function ( 	declare ) {
 						}, 
 						popnow:{
 							values:[], vis:true, min:0, max:11,
-							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in forest/wetland floodplain of the selected return interval."
+							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in forest/wetland floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
 							values:[], vis:true, min:0, max:1001,
-							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected return interval in 2050."
+							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected return interval in 2050. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
 							values:[], vis:true, min:0, max:50000000,
@@ -635,7 +635,7 @@ function ( 	declare ) {
 						}, 
 						WT_TOT:{
 							values:[],vis:true,min:0,max:8,shfld:true,
-							info:"<b>At-Risk Wetland Species</b><br>Total number of wetland species in catchment considered Imperiled (G1/G2) by NatureServe or threatened or endangered under the Endangered Species Act. <a href='https://enviroatlas.epa.gov/enviroatlas/DataFactSheets/pdf/ESN/Totalnumberofatriskwetlandspecies.pdf' target='_blank'></More Info</a>"
+							info:"<b>At-Risk Wetland Species</b><br>Total number of wetland species in catchment considered Imperiled (G1/G2) by NatureServe or threatened or endangered under the Endangered Species Act. <a href='https://enviroatlas.epa.gov/enviroatlas/DataFactSheets/pdf/ESN/Totalnumberofatriskwetlandspecies.pdf' target='_blank'>More Info</a>"
 						}, 
 						cumu_hci:{
 							values:[], vis:true, min:0.999, max:5.001, step:0.001, shfld:true,
@@ -643,11 +643,11 @@ function ( 	declare ) {
 						}, 
 						popnow:{
 							values:[], vis:true, min:0, max:11,
-							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in forest/wetland floodplain of the selected return interval."
+							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in forest/wetland floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
 							values:[], vis:true, min:0, max:1001,
-							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected return interval in 2050."
+							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected return interval in 2050. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
 							values:[], vis:true, min:0, max:50000000,
@@ -685,7 +685,7 @@ function ( 	declare ) {
 						},
 						WT_TOT:{
 							values:[],vis:true,min:0,max:8,shfld:true,
-							info:"<b>At-Risk Wetland Species</b><br>Total number of wetland species in catchment considered Imperiled (G1/G2) by NatureServe or threatened or endangered under the Endangered Species Act. <a href='https://enviroatlas.epa.gov/enviroatlas/DataFactSheets/pdf/ESN/Totalnumberofatriskwetlandspecies.pdf' target='_blank'></More Info</a>"
+							info:"<b>At-Risk Wetland Species</b><br>Total number of wetland species in catchment considered Imperiled (G1/G2) by NatureServe or threatened or endangered under the Endangered Species Act. <a href='https://enviroatlas.epa.gov/enviroatlas/DataFactSheets/pdf/ESN/Totalnumberofatriskwetlandspecies.pdf' target='_blank'>More Info</a>"
 						}, 
 						cumu_hci:{
 							values:[], vis:true, min:0.999, max:5.001, step:0.001, shfld:true,
@@ -693,11 +693,11 @@ function ( 	declare ) {
 						}, 
 						popnow:{
 							values:[], vis:true, min:0, max:11,
-							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in ag or pasture land that is in a floodplain of the selected return interval."
+							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
 							values:[], vis:true, min:0, max:501,
-							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected return interval."
+							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
 							values:[], vis:true, min:0, max:10000000, 
@@ -734,7 +734,7 @@ function ( 	declare ) {
 						}, 
 						WT_TOT:{
 							values:[],vis:true,min:0,max:8,shfld:true,
-							info:"<b>At-Risk Wetland Species</b><br>Total number of wetland species in catchment considered Imperiled (G1/G2) by NatureServe or threatened or endangered under the Endangered Species Act. <a href='https://enviroatlas.epa.gov/enviroatlas/DataFactSheets/pdf/ESN/Totalnumberofatriskwetlandspecies.pdf' target='_blank'></More Info</a>"
+							info:"<b>At-Risk Wetland Species</b><br>Total number of wetland species in catchment considered Imperiled (G1/G2) by NatureServe or threatened or endangered under the Endangered Species Act. <a href='https://enviroatlas.epa.gov/enviroatlas/DataFactSheets/pdf/ESN/Totalnumberofatriskwetlandspecies.pdf' target='_blank'>More Info</a>"
 						}, 
 						cumu_hci:{
 							values:[], vis:true, min:0.999, max:5.001, step:0.001, shfld:true,
@@ -742,11 +742,11 @@ function ( 	declare ) {
 						}, 
 						popnow:{
 							values:[], vis:true, min:0, max:26,
-							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in ag or pasture land that is in a floodplain of the selected return interval."
+							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
 							values:[], vis:true, min:0, max:1501,
-							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected return interval."
+							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
 							values:[], vis:true, min:0, max:50000000, 
@@ -784,7 +784,7 @@ function ( 	declare ) {
 						}, 
 						WT_TOT:{
 							values:[],vis:true,min:0,max:8,shfld:true,
-							info:"<b>At-Risk Wetland Species</b><br>Total number of wetland species in catchment considered Imperiled (G1/G2) by NatureServe or threatened or endangered under the Endangered Species Act. <a href='https://enviroatlas.epa.gov/enviroatlas/DataFactSheets/pdf/ESN/Totalnumberofatriskwetlandspecies.pdf' target='_blank'></More Info</a>"
+							info:"<b>At-Risk Wetland Species</b><br>Total number of wetland species in catchment considered Imperiled (G1/G2) by NatureServe or threatened or endangered under the Endangered Species Act. <a href='https://enviroatlas.epa.gov/enviroatlas/DataFactSheets/pdf/ESN/Totalnumberofatriskwetlandspecies.pdf' target='_blank'>More Info</a>"
 						}, 
 						cumu_hci:{
 							values:[], vis:true, min:0.999, max:5.001, step:0.001, shfld:true,
@@ -792,11 +792,11 @@ function ( 	declare ) {
 						}, 
 						popnow:{
 							values:[], vis:true, min:0, max:26,
-							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in ag or pasture land that is in a floodplain of the selected return interval."
+							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
 							values:[], vis:true, min:0, max:1501,
-							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected return interval."
+							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
 							values:[], vis:true, min:0, max:50000000, 
@@ -833,7 +833,7 @@ function ( 	declare ) {
 						}, 
 						WT_TOT:{
 							values:[],vis:true,min:0,max:8,shfld:true,
-							info:"<b>At-Risk Wetland Species</b><br>Total number of wetland species in catchment considered Imperiled (G1/G2) by NatureServe or threatened or endangered under the Endangered Species Act. <a href='https://enviroatlas.epa.gov/enviroatlas/DataFactSheets/pdf/ESN/Totalnumberofatriskwetlandspecies.pdf' target='_blank'></More Info</a>"
+							info:"<b>At-Risk Wetland Species</b><br>Total number of wetland species in catchment considered Imperiled (G1/G2) by NatureServe or threatened or endangered under the Endangered Species Act. <a href='https://enviroatlas.epa.gov/enviroatlas/DataFactSheets/pdf/ESN/Totalnumberofatriskwetlandspecies.pdf' target='_blank'>More Info</a>"
 						}, 
 						cumu_hci:{
 							values:[], vis:true, min:0.999, max:5.001, step:0.001, shfld:true,
@@ -841,11 +841,11 @@ function ( 	declare ) {
 						}, 
 						popnow:{
 							values:[], vis:true, min:1, max:11,
-							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in forest/wetland floodplain of the selected return interval."
+							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in forest/wetland floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
 							values:[], vis:true, min:1, max:501,
-							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected return interval in 2050."
+							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected return interval in 2050. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
 							values:[], vis:true, min:10000, max:350000, 
@@ -881,7 +881,7 @@ function ( 	declare ) {
 						}, 
 						WT_TOT:{
 							values:[],vis:true,min:0,max:8,shfld:true,
-							info:"<b>At-Risk Wetland Species</b><br>Total number of wetland species in catchment considered Imperiled (G1/G2) by NatureServe or threatened or endangered under the Endangered Species Act. <a href='https://enviroatlas.epa.gov/enviroatlas/DataFactSheets/pdf/ESN/Totalnumberofatriskwetlandspecies.pdf' target='_blank'></More Info</a>"
+							info:"<b>At-Risk Wetland Species</b><br>Total number of wetland species in catchment considered Imperiled (G1/G2) by NatureServe or threatened or endangered under the Endangered Species Act. <a href='https://enviroatlas.epa.gov/enviroatlas/DataFactSheets/pdf/ESN/Totalnumberofatriskwetlandspecies.pdf' target='_blank'>More Info</a>"
 						}, 
 						cumu_hci:{
 							values:[], vis:true, min:0.999, max:5.001, step:0.001, shfld:true,
@@ -889,11 +889,11 @@ function ( 	declare ) {
 						}, 
 						popnow:{
 							values:[], vis:true, min:1, max:11,
-							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in forest/wetland floodplain of the selected return interval."
+							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in forest/wetland floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
 							values:[], vis:true, min:1, max:501,
-							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected return interval in 2050."
+							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected return interval in 2050. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
 							values:[], vis:true, min:10000, max:1000000, 
@@ -930,7 +930,7 @@ function ( 	declare ) {
 						}, 
 						WT_TOT:{
 							values:[],vis:true,min:0,max:8,shfld:true,
-							info:"<b>At-Risk Wetland Species</b><br>Total number of wetland species in catchment considered Imperiled (G1/G2) by NatureServe or threatened or endangered under the Endangered Species Act. <a href='https://enviroatlas.epa.gov/enviroatlas/DataFactSheets/pdf/ESN/Totalnumberofatriskwetlandspecies.pdf' target='_blank'></More Info</a>"
+							info:"<b>At-Risk Wetland Species</b><br>Total number of wetland species in catchment considered Imperiled (G1/G2) by NatureServe or threatened or endangered under the Endangered Species Act. <a href='https://enviroatlas.epa.gov/enviroatlas/DataFactSheets/pdf/ESN/Totalnumberofatriskwetlandspecies.pdf' target='_blank'>More Info</a>"
 						}, 
 						cumu_hci:{
 							values:[], vis:true, min:0.999, max:5.001, step:0.001, shfld:true,
@@ -938,11 +938,11 @@ function ( 	declare ) {
 						}, 
 						popnow:{
 							values:[], vis:true, min:1, max:11,
-							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in forest/wetland floodplain of the selected return interval."
+							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in forest/wetland floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
 							values:[], vis:true, min:1, max:501,
-							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected return interval in 2050."
+							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected return interval in 2050. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
 							values:[], vis:true, min:10000, max:1000000,
@@ -980,7 +980,7 @@ function ( 	declare ) {
 						}, 
 						WT_TOT:{
 							values:[], vis:true, min:0, max:8, shfld:true,
-							info:"<b>At-Risk Wetland Species</b><br>Total number of wetland species in catchment considered Imperiled (G1/G2) by NatureServe or threatened or endangered under the Endangered Species Act. <a href='https://enviroatlas.epa.gov/enviroatlas/DataFactSheets/pdf/ESN/Totalnumberofatriskwetlandspecies.pdf' target='_blank'></More Info</a>"
+							info:"<b>At-Risk Wetland Species</b><br>Total number of wetland species in catchment considered Imperiled (G1/G2) by NatureServe or threatened or endangered under the Endangered Species Act. <a href='https://enviroatlas.epa.gov/enviroatlas/DataFactSheets/pdf/ESN/Totalnumberofatriskwetlandspecies.pdf' target='_blank'>More Info</a>"
 						}, 
 						cumu_hci:{
 							values:[], vis:true, min:0.999, max:5.001, step:0.001, shfld:true,
@@ -988,11 +988,11 @@ function ( 	declare ) {
 						}, 
 						popnow:{
 							values:[], vis:true, min:1, max:11,
-							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in ag or pasture land that is in a floodplain of the selected return interval."
+							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
 							values:[], vis:true, min:1, max:501,
-							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected return interval."
+							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
 							values:[], vis:true, min:10000, max:200000, 
@@ -1029,7 +1029,7 @@ function ( 	declare ) {
 						}, 
 						WT_TOT:{
 							values:[],vis:true,min:0,max:8,shfld:true,
-							info:"<b>At-Risk Wetland Species</b><br>Total number of wetland species in catchment considered Imperiled (G1/G2) by NatureServe or threatened or endangered under the Endangered Species Act. <a href='https://enviroatlas.epa.gov/enviroatlas/DataFactSheets/pdf/ESN/Totalnumberofatriskwetlandspecies.pdf' target='_blank'></More Info</a>"
+							info:"<b>At-Risk Wetland Species</b><br>Total number of wetland species in catchment considered Imperiled (G1/G2) by NatureServe or threatened or endangered under the Endangered Species Act. <a href='https://enviroatlas.epa.gov/enviroatlas/DataFactSheets/pdf/ESN/Totalnumberofatriskwetlandspecies.pdf' target='_blank'>More Info</a>"
 						}, 
 						cumu_hci:{
 							values:[], vis:true, min:0.999, max:5.001, step:0.001, shfld:true,
@@ -1037,11 +1037,11 @@ function ( 	declare ) {
 						}, 
 						popnow:{
 							values:[], vis:true, min:1, max:11,
-							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in ag or pasture land that is in a floodplain of the selected return interval."
+							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
 							values:[], vis:true, min:1, max:501,
-							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected return interval."
+							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
 							values:[], vis:true, min:10000, max:1000000, 
@@ -1079,7 +1079,7 @@ function ( 	declare ) {
 						}, 
 						WT_TOT:{
 							values:[], vis:true, min:0, max:8, shfld:true,
-							info:"<b>At-Risk Wetland Species</b><br>Total number of wetland species in catchment considered Imperiled (G1/G2) by NatureServe or threatened or endangered under the Endangered Species Act. <a href='https://enviroatlas.epa.gov/enviroatlas/DataFactSheets/pdf/ESN/Totalnumberofatriskwetlandspecies.pdf' target='_blank'></More Info</a>"
+							info:"<b>At-Risk Wetland Species</b><br>Total number of wetland species in catchment considered Imperiled (G1/G2) by NatureServe or threatened or endangered under the Endangered Species Act. <a href='https://enviroatlas.epa.gov/enviroatlas/DataFactSheets/pdf/ESN/Totalnumberofatriskwetlandspecies.pdf' target='_blank'>More Info</a>"
 						}, 
 						cumu_hci:{
 							values:[], vis:true, min:0.999, max:5.001, step:0.001, shfld:true,
@@ -1087,11 +1087,11 @@ function ( 	declare ) {
 						}, 
 						popnow:{
 							values:[], vis:true, min:1, max:11,
-							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in ag or pasture land that is in a floodplain of the selected return interval."
+							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
 							values:[], vis:true, min:1, max:501,
-							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected return interval."
+							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
 							values:[], vis:true, min:10000, max:1000000, 
