@@ -9,7 +9,7 @@ function ( 	declare ) {
 				t.url = "https://cirrus.tnc.org/arcgis/rest/services/FN_AGR/missRiverBasinFP/MapServer";
 				// build top level controls
 				t.topObj = {
-					introP: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+					introP: "The Floodplains Prioritization Tool (FP Tool) is designed to identify critical opportunities for floodplain protection and restoration in the Mississippi River Basin. Use the selector widgets below to specify criteria related to water quality, wildlife habitat, and human exposure to flood risk. The map on the right will change in response to your selections to identify sites meeting these criteria and identify those geographies where floodplain restoration or conservation is likely to have the greatest positive impact on the health of this river system.",
 					toggleBtns:{
 						tb1:{
 							header:"Select Flood Frequency",
@@ -79,8 +79,8 @@ function ( 	declare ) {
 							con0:{
 								type:"slider",
 								field:"Acres",
-								label:"Available floodplain area for given return interval and management action",
-								unit:"sq km",
+								label:"Available floodplain area for given flood frequency and management action",
+								unit:"acres",
 								single:true
 							}	
 						}
@@ -182,12 +182,6 @@ function ( 	declare ) {
 								field:"P2_2050",
 								label:"Potential Future Flood Damages to Structures (2050) ($)",
 								unit:""
-							},
-							con1:{
-								type:"slider",
-								field:"Damage_2",
-								label:"Estimated Agricultural Losses From Flooding ($)",
-								unit:""
 							}
 						}
 					},
@@ -216,7 +210,7 @@ function ( 	declare ) {
 
 				// definition expression root field names
 				t.exp = {
-					Acres:"", ACCp:"", DINp:"", GDDsP:"", CPI:"", inIBA:"", TNC:"", WT_TOT:"", FWScrit:"", ABCcorr:"", cumu_hci:"", popnow:"", pop2050:"", P2_2050:"", Damage_2:"", SOVI:""
+					Acres:"", ACCp:"", DINp:"", GDDsP:"", CPI:"", inIBA:"", TNC:"", WT_TOT:"", FWScrit:"", ABCcorr:"", cumu_hci:"", popnow:"", pop2050:"", P2_2050:"", SOVI:""
 				}
 				// object for range slider
 				t.sliderObj = {
@@ -224,7 +218,7 @@ function ( 	declare ) {
 					h8p1:{
 						Acres:{
 							values:[], vis:true, min:0, max:50000, gtmax:true,
-							info:"<b>Available floodplain area for given return interval and management action</b><br>Area of floodplain in forest, wetland, or grassland that is not currently in protected status."
+							info:"<b>Available floodplain area for given flood frequency and management action</b><br>Area of floodplain in forest, wetland, or grassland that is not currently in protected status."
 						}, 
 						ACCp:{
 							values:[], vis:true, min:0, max:100,
@@ -236,7 +230,7 @@ function ( 	declare ) {
 						}, 
 						GDDsP:{
 							values:[], vis:true, min:0, max:100, 
-							info:"<b>Growing degree days</b><br>Accumulated growing degree days for 2016-2017, normalized to a 0-100 scale. May be used in conjunction with &x22;local nutrient loading&x22; slider above to identify 5-year-floodplain with high loading and high growing degree days, i.e. high denitrification potential."
+							info:"<b>Growing degree days</b><br>Accumulated growing degree days for 2016-2017, normalized to a 0-100 scale. May be used in conjunction with &#x22;local nutrient loading&#x22; slider above to identify 5-year-floodplain with high loading and high growing degree days, i.e. high denitrification potential."
 						}, 
 						CPI:{
 							vis:false
@@ -251,29 +245,27 @@ function ( 	declare ) {
 						}, 
 						popnow:{
 							values:[], vis:true, min:0, max:151, gtmax:true,
-							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in forest/wetland floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
+							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in forest/wetland floodplain of the selected flood frequency. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
 							values:[], vis:true, min:0, max:3501, gtmax:true,
-							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected return interval in 2050. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
+							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected flood frequency in 2050. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
 							values:[], vis:true, min:0, max:200000000, gtmax:true, 
-							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
+							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected flood frequency and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
-						Damage_2:{
-							vis:false
-						},
+						
 						SOVI:{
-							values:[], vis:true, min:0, max:100,
-							info:"<b>Index of Social Vulnerability to Environmental Hazards</b><br>Index characterizing social vulnerability to environmental hazards, drawing on 22 demographic variables, and normalized to 0-100 scale. <a href='http://artsandsciences.sc.edu/geog/hvri/faq' target='_blank'>More Info</a>"
+							values:[], vis:true, min:-2.277, max:4.110,  step:0.001, shfld:true,
+							info:"<b>Index of Social Vulnerability to Environmental Hazards</b><br>Index characterizing social vulnerability to environmental hazards, drawing on 22 demographic variables. At the national scale, values below -1 are considered low social vulnerability, -1 to +1 are medium, and above +1 are high. <a href='http://artsandsciences.sc.edu/geog/hvri/faq' target='_blank'>More Info</a>"
 						}
 					},
 					// huc 8 + protection + 1 in 100 year flood
 					h8p2:{
 						Acres:{
 							values:[], vis:true, min:0, max:200000, gtmax:true,
-							info:"<b>Available floodplain area for given return interval and management action</b><br>Area of floodplain in forest, wetland, or grassland that is not currently in protected status."
+							info:"<b>Available floodplain area for given flood frequency and management action</b><br>Area of floodplain in forest, wetland, or grassland that is not currently in protected status."
 						},
 						ACCp:{
 							values:[], vis:true, min:0, max:100,
@@ -299,30 +291,26 @@ function ( 	declare ) {
 						}, 
 						popnow:{
 							values:[], vis:true, min:0, max:251, gtmax:true,
-							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in forest/wetland floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
+							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in forest/wetland floodplain of the selected flood frequency. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
 							values:[], vis:true, min:0, max:8501, gtmax:true,
-							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected return interval in 2050. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
+							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected flood frequency in 2050. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
 							values:[], vis:true, min:0, max:1000000000, gtmax:true,
-							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
-						},
-						Damage_2:{
-							values:[], vis:true, min:0, max:500000, shfld:true,
-							info:"<b>Estimated Agricultural Losses From Flooding ($)</b><br>Estimate of agricultural losses to row crops (in USD) assuming a 100-year flood of 24-hour inundation duration occurring on June 1. For more information on the modeling approach, see ch. 6 of <a href='https://www.hec.usace.army.mil/software/hec-fia/documentation/CPD-81c,%20HEC-FIA%20Technical%20Reference%20Manual.pdf' target='_blank'>this document</a>."
+							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected flood frequency and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						SOVI:{
-							values:[], vis:true, min:0, max:100,
-							info:"<b>Index of Social Vulnerability to Environmental Hazards</b><br>Index characterizing social vulnerability to environmental hazards, drawing on 22 demographic variables, and normalized to 0-100 scale. <a href='http://artsandsciences.sc.edu/geog/hvri/faq' target='_blank'>More Info</a>"
+							values:[], vis:true, min:-2.277, max:4.110,  step:0.001, shfld:true,
+							info:"<b>Index of Social Vulnerability to Environmental Hazards</b><br>Index characterizing social vulnerability to environmental hazards, drawing on 22 demographic variables. At the national scale, values below -1 are considered low social vulnerability, -1 to +1 are medium, and above +1 are high. <a href='http://artsandsciences.sc.edu/geog/hvri/faq' target='_blank'>More Info</a>"
 						}
 					},
 					// huc 8 + protection + 1 in 500 year flood
 					h8p3:{
 						Acres:{
 							values:[], vis:true, min:0,	max:200000, gtmax:true,
-							info:"<b>Available floodplain area for given return interval and management action</b><br>Area of floodplain in forest, wetland, or grassland that is not currently in protected status."
+							info:"<b>Available floodplain area for given flood frequency and management action</b><br>Area of floodplain in forest, wetland, or grassland that is not currently in protected status."
 						}, 
 						ACCp:{
 							values:[], vis:true, min:0, max:100,
@@ -348,29 +336,27 @@ function ( 	declare ) {
 						}, 
 						popnow:{
 							values:[], vis:true, min:0, max:301, gtmax:true,
-							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in forest/wetland floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
+							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in forest/wetland floodplain of the selected flood frequency. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
 							values:[], vis:true, min:0, max:10001, gtmax:true,
-							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected return interval in 2050. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
+							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected flood frequency in 2050. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
 							values:[], vis:true, min:0, max:1250000000, gtmax:true, 
-							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
+							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected flood frequency and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
-						Damage_2:{
-							vis:false
-						},
+						
 						SOVI:{
-							values:[], vis:true, min:0, max:100,
-							info:"<b>Index of Social Vulnerability to Environmental Hazards</b><br>Index characterizing social vulnerability to environmental hazards, drawing on 22 demographic variables, and normalized to 0-100 scale. <a href='http://artsandsciences.sc.edu/geog/hvri/faq' target='_blank'>More Info</a>"
+							values:[], vis:true, min:-2.277, max:4.110,  step:0.001, shfld:true,
+							info:"<b>Index of Social Vulnerability to Environmental Hazards</b><br>Index characterizing social vulnerability to environmental hazards, drawing on 22 demographic variables. At the national scale, values below -1 are considered low social vulnerability, -1 to +1 are medium, and above +1 are high. <a href='http://artsandsciences.sc.edu/geog/hvri/faq' target='_blank'>More Info</a>"
 						}
 					},
 					// huc 8 + restoration + 1 in 5 year flood
 					h8r1:{
 						Acres:{
 							values:[], vis:true, min:0, max:40000, gtmax:true,
-							info:"<b>Available floodplain area for given return interval and management action</b><br>Area of floodplain in ag or pasture land that could potentially be restored"
+							info:"<b>Available floodplain area for given flood frequency and management action</b><br>Area of floodplain in ag or pasture land that could potentially be restored"
 						}, 
 						ACCp:{
 							values:[], vis:true, min:0, max:100,
@@ -382,7 +368,7 @@ function ( 	declare ) {
 						}, 
 						GDDsP:{
 							values:[], vis:true, min:0, max:100,
-							info:"<b>Growing degree days</b><br>Accumulated growing degree days for 2016-2017, normalized to a 0-100 scale. May be used in conjunction with &x22;local nutrient loading&x22; slider above to identify 5-year-floodplain with high loading and high growing degree days, i.e. high denitrification potential."
+							info:"<b>Growing degree days</b><br>Accumulated growing degree days for 2016-2017, normalized to a 0-100 scale. May be used in conjunction with &#x22;local nutrient loading&#x22; slider above to identify 5-year-floodplain with high loading and high growing degree days, i.e. high denitrification potential."
 						}, 
 						CPI:{
 							values:[], vis:true, min:0, max:0.708, step:0.001,
@@ -398,29 +384,26 @@ function ( 	declare ) {
 						}, 
 						popnow:{
 							values:[], vis:true, min:0, max:151, gtmax:true,
-							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
+							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in ag or pasture land that is in a floodplain of the selected flood frequency. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
 							values:[], vis:true, min:0, max:3001, gtmax:true,
-							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
+							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected flood frequency. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
 							values:[], vis:true, min:0, max:75000000, gtmax:true, 
-							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
-						},
-						Damage_2:{
-							vis:false
+							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected flood frequency and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						SOVI:{
-							values:[], vis:true, min:0, max:100,
-							info:"<b>Index of Social Vulnerability to Environmental Hazards</b><br>Index characterizing social vulnerability to environmental hazards, drawing on 22 demographic variables, and normalized to 0-100 scale. <a href='http://artsandsciences.sc.edu/geog/hvri/faq' target='_blank'>More Info</a>"
+							values:[], vis:true, min:-2.277, max:4.110,  step:0.001, shfld:true,
+							info:"<b>Index of Social Vulnerability to Environmental Hazards</b><br>Index characterizing social vulnerability to environmental hazards, drawing on 22 demographic variables. At the national scale, values below -1 are considered low social vulnerability, -1 to +1 are medium, and above +1 are high. <a href='http://artsandsciences.sc.edu/geog/hvri/faq' target='_blank'>More Info</a>"
 						}
 					},
 					// huc 8 + restoration + 1 in 100 year flood
 					h8r2:{
 						Acres:{
 							values:[], vis:true, min:0, max:300000, gtmax:true,
-							info:"<b>Available floodplain area for given return interval and management action</b><br>Area of floodplain in ag or pasture land that could potentially be restored"
+							info:"<b>Available floodplain area for given flood frequency and management action</b><br>Area of floodplain in ag or pasture land that could potentially be restored"
 						}, 
 						ACCp:{
 							values:[], vis:true, min:0, max:100,
@@ -447,30 +430,26 @@ function ( 	declare ) {
 						}, 
 						popnow:{
 							values:[], vis:true, min:0, max:351, gtmax:true,
-							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
+							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in ag or pasture land that is in a floodplain of the selected flood frequency. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
 							values:[], vis:true, min:0, max:15001, gtmax:true,
-							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
+							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected flood frequency. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
 							values:[], vis:true, min:0, max:1000000000, gtmax:true, 
-							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
-						},
-						Damage_2:{
-							values:[], vis:true, min:0, max:500000, shfld:true,
-							info:"<b>Estimated Agricultural Losses From Flooding ($)</b><br>Estimate of agricultural losses to row crops (in USD) assuming a 100-year flood of 24-hour inundation duration occurring on June 1. For more information on the modeling approach, see ch. 6 of <a href='https://www.hec.usace.army.mil/software/hec-fia/documentation/CPD-81c,%20HEC-FIA%20Technical%20Reference%20Manual.pdf' target='_blank'>this document</a>."
+							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected flood frequency and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						SOVI:{
-							values:[], vis:true, min:0, max:100,
-							info:"<b>Index of Social Vulnerability to Environmental Hazards</b><br>Index characterizing social vulnerability to environmental hazards, drawing on 22 demographic variables, and normalized to 0-100 scale. <a href='http://artsandsciences.sc.edu/geog/hvri/faq' target='_blank'>More Info</a>"
+							values:[], vis:true, min:-2.277, max:4.110,  step:0.001, shfld:true,
+							info:"<b>Index of Social Vulnerability to Environmental Hazards</b><br>Index characterizing social vulnerability to environmental hazards, drawing on 22 demographic variables. At the national scale, values below -1 are considered low social vulnerability, -1 to +1 are medium, and above +1 are high. <a href='http://artsandsciences.sc.edu/geog/hvri/faq' target='_blank'>More Info</a>"
 						}
 					},
 					// huc 8 + restoration + 1 in 500 year flood
 					h8r3:{
 						Acres:{
 							values:[], vis:true, min:0, max:500000, gtmax:true,
-							info:"<b>Available floodplain area for given return interval and management action</b><br>Area of floodplain in ag or pasture land that could potentially be restored"
+							info:"<b>Available floodplain area for given flood frequency and management action</b><br>Area of floodplain in ag or pasture land that could potentially be restored"
 						}, 
 						ACCp:{
 							values:[], vis:true, min:0, max:100,
@@ -497,29 +476,26 @@ function ( 	declare ) {
 						}, 
 						popnow:{
 							values:[], vis:true, min:0, max:501, gtmax:true,
-							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
+							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in ag or pasture land that is in a floodplain of the selected flood frequency. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
 							values:[], vis:true, min:0, max:20001, gtmax:true,
-							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
+							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected flood frequency. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
 							values:[], vis:true, min:0, max:1500000000, gtmax:true,
-							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
-						},
-						Damage_2:{
-							vis:false
+							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected flood frequency and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						SOVI:{
-							values:[], vis:true, min:0, max:100,
-							info:"<b>Index of Social Vulnerability to Environmental Hazards</b><br>Index characterizing social vulnerability to environmental hazards, drawing on 22 demographic variables, and normalized to 0-100 scale. <a href='http://artsandsciences.sc.edu/geog/hvri/faq' target='_blank'>More Info</a>"
+							values:[], vis:true, min:-2.277, max:4.110,  step:0.001, shfld:true,
+							info:"<b>Index of Social Vulnerability to Environmental Hazards</b><br>Index characterizing social vulnerability to environmental hazards, drawing on 22 demographic variables. At the national scale, values below -1 are considered low social vulnerability, -1 to +1 are medium, and above +1 are high. <a href='http://artsandsciences.sc.edu/geog/hvri/faq' target='_blank'>More Info</a>"
 						}
 					},
 					// huc 12 + protection + 1 in 5 year flood
 					h12p1:{
 						Acres:{
 							values:[], vis:true, min:0, max:2500, gtmax:true,
-							info:"<b>Available floodplain area for given return interval and management action</b><br>Area of floodplain in forest, wetland, or grassland that is not currently in protected status."
+							info:"<b>Available floodplain area for given flood frequency and management action</b><br>Area of floodplain in forest, wetland, or grassland that is not currently in protected status."
 						}, 
 						ACCp:{
 							values:[], vis:true, min:0, max:100,
@@ -531,7 +507,7 @@ function ( 	declare ) {
 						}, 
 						GDDsP:{
 							values:[], vis:true, min:0, max:100,
-							info:"<b>Growing degree days</b><br>Accumulated growing degree days for 2016-2017, normalized to a 0-100 scale. May be used in conjunction with &x22;local nutrient loading&x22; slider above to identify 5-year-floodplain with high loading and high growing degree days, i.e. high denitrification potential."
+							info:"<b>Growing degree days</b><br>Accumulated growing degree days for 2016-2017, normalized to a 0-100 scale. May be used in conjunction with &#x22;local nutrient loading&#x22; slider above to identify 5-year-floodplain with high loading and high growing degree days, i.e. high denitrification potential."
 						}, 
 						CPI:{
 							vis:false
@@ -546,29 +522,26 @@ function ( 	declare ) {
 						}, 
 						popnow:{
 							values:[], vis:true, min:0, max:11, gtmax:true,
-							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in forest/wetland floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
+							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in forest/wetland floodplain of the selected flood frequency. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
 							values:[], vis:true, min:0, max:501, gtmax:true,
-							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected return interval in 2050. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
+							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected flood frequency in 2050. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
 							values:[], vis:true, min:0, max:25000000, gtmax:true,
-							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
-						},
-						Damage_2:{
-							vis:false
+							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected flood frequency and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						SOVI:{
-							values:[], vis:true, min:0, max:100,
-							info:"<b>Index of Social Vulnerability to Environmental Hazards</b><br>Index characterizing social vulnerability to environmental hazards, drawing on 22 demographic variables, and normalized to 0-100 scale. <a href='http://artsandsciences.sc.edu/geog/hvri/faq' target='_blank'>More Info</a>"
+							values:[], vis:true, min:-5.019, max:7.150,  step:0.001, shfld:true,
+							info:"<b>Index of Social Vulnerability to Environmental Hazards</b><br>Index characterizing social vulnerability to environmental hazards, drawing on 22 demographic variables. At the national scale, values below -1 are considered low social vulnerability, -1 to +1 are medium, and above +1 are high. <a href='http://artsandsciences.sc.edu/geog/hvri/faq' target='_blank'>More Info</a>"
 						}
 					},
 					// huc 12 + protection + 1 in 100 year flood
 					h12p2:{
 						Acres:{
 							values:[], vis:true, min:0, max:2500, gtmax:true,
-							info:"<b>Available floodplain area for given return interval and management action</b><br>Area of floodplain in forest, wetland, or grassland that is not currently in protected status."
+							info:"<b>Available floodplain area for given flood frequency and management action</b><br>Area of floodplain in forest, wetland, or grassland that is not currently in protected status."
 						}, 
 						ACCp:{
 							values:[], vis:true, min:0, max:100,
@@ -594,30 +567,26 @@ function ( 	declare ) {
 						}, 
 						popnow:{
 							values:[], vis:true, min:0, max:11, gtmax:true,
-							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in forest/wetland floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
+							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in forest/wetland floodplain of the selected flood frequency. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
 							values:[], vis:true, min:0, max:1001, gtmax:true,
-							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected return interval in 2050. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
+							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected flood frequency in 2050. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
 							values:[], vis:true, min:0, max:50000000, gtmax:true,
-							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
-						},
-						Damage_2:{
-							values:[], vis:true, min:0, max:500000, shfld:true,
-							info:"<b>Estimated Agricultural Losses From Flooding ($)</b><br>Estimate of agricultural losses to row crops (in USD) assuming a 100-year flood of 24-hour inundation duration occurring on June 1. For more information on the modeling approach, see ch. 6 of <a href='https://www.hec.usace.army.mil/software/hec-fia/documentation/CPD-81c,%20HEC-FIA%20Technical%20Reference%20Manual.pdf' target='_blank'>this document</a>."
+							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected flood frequency and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						SOVI:{
-							values:[], vis:true, min:0, max:100,
-							info:"<b>Index of Social Vulnerability to Environmental Hazards</b><br>Index characterizing social vulnerability to environmental hazards, drawing on 22 demographic variables, and normalized to 0-100 scale. <a href='http://artsandsciences.sc.edu/geog/hvri/faq' target='_blank'>More Info</a>"
+							values:[], vis:true, min:-5.019, max:7.150,  step:0.001, shfld:true,
+							info:"<b>Index of Social Vulnerability to Environmental Hazards</b><br>Index characterizing social vulnerability to environmental hazards, drawing on 22 demographic variables. At the national scale, values below -1 are considered low social vulnerability, -1 to +1 are medium, and above +1 are high. <a href='http://artsandsciences.sc.edu/geog/hvri/faq' target='_blank'>More Info</a>"
 						}
 					},
 					// huc 12 + protection + 1 in 500 year flood
 					h12p3:{
 						Acres:{
 							values:[], vis:true, min:0, max:2500, gtmax:true,
-							info:"<b>Available floodplain area for given return interval and management action</b><br>Area of floodplain in forest, wetland, or grassland that is not currently in protected status."
+							info:"<b>Available floodplain area for given flood frequency and management action</b><br>Area of floodplain in forest, wetland, or grassland that is not currently in protected status."
 						}, 
 						ACCp:{
 							values:[], vis:true, min:0, max:100,
@@ -643,29 +612,26 @@ function ( 	declare ) {
 						}, 
 						popnow:{
 							values:[], vis:true, min:0, max:11, gtmax:true,
-							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in forest/wetland floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
+							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in forest/wetland floodplain of the selected flood frequency. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
 							values:[], vis:true, min:0, max:1001, gtmax:true,
-							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected return interval in 2050. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
+							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected flood frequency in 2050. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
 							values:[], vis:true, min:0, max:50000000, gtmax:true,
-							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
-						},
-						Damage_2:{
-							vis:false
+							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected flood frequency and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						SOVI:{
-							values:[], vis:true, min:0, max:100,
-							info:"<b>Index of Social Vulnerability to Environmental Hazards</b><br>Index characterizing social vulnerability to environmental hazards, drawing on 22 demographic variables, and normalized to 0-100 scale. <a href='http://artsandsciences.sc.edu/geog/hvri/faq' target='_blank'>More Info</a>"
+							values:[], vis:true, min:-5.019, max:7.150,  step:0.001, shfld:true,
+							info:"<b>Index of Social Vulnerability to Environmental Hazards</b><br>Index characterizing social vulnerability to environmental hazards, drawing on 22 demographic variables. At the national scale, values below -1 are considered low social vulnerability, -1 to +1 are medium, and above +1 are high. <a href='http://artsandsciences.sc.edu/geog/hvri/faq' target='_blank'>More Info</a>"
 						}
 					},
 					// huc 12 + restoration + 1 in 5 year flood
 					h12r1:{
 						Acres:{
 							values:[], vis:true, min:0, max:2500, gtmax:true,
-							info:"<b>Available floodplain area for given return interval and management action</b><br>Area of floodplain in ag or pasture land that could potentially be restored"
+							info:"<b>Available floodplain area for given flood frequency and management action</b><br>Area of floodplain in ag or pasture land that could potentially be restored"
 						}, 
 						ACCp:{
 							values:[], vis:true, min:0, max:100,
@@ -677,7 +643,7 @@ function ( 	declare ) {
 						}, 
 						GDDsP:{
 							values:[], vis:true, min:0, max:100,
-							info:"<b>Growing degree days</b><br>Accumulated growing degree days for 2016-2017, normalized to a 0-100 scale. May be used in conjunction with &x22;local nutrient loading&x22; slider above to identify 5-year-floodplain with high loading and high growing degree days, i.e. high denitrification potential."
+							info:"<b>Growing degree days</b><br>Accumulated growing degree days for 2016-2017, normalized to a 0-100 scale. May be used in conjunction with &#x22;local nutrient loading&#x22; slider above to identify 5-year-floodplain with high loading and high growing degree days, i.e. high denitrification potential."
 						}, 
 						CPI:{
 							values:[],vis:true,min:0,max:0.808,step:0.001,
@@ -693,29 +659,26 @@ function ( 	declare ) {
 						}, 
 						popnow:{
 							values:[], vis:true, min:0, max:11, gtmax:true,
-							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
+							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in ag or pasture land that is in a floodplain of the selected flood frequency. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
 							values:[], vis:true, min:0, max:501, gtmax:true,
-							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
+							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected flood frequency. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
 							values:[], vis:true, min:0, max:10000000, gtmax:true, 
-							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
-						},
-						Damage_2:{
-							vis:false
+							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected flood frequency and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						SOVI:{
-							values:[], vis:true, min:0, max:100,
-							info:"<b>Index of Social Vulnerability to Environmental Hazards</b><br>Index characterizing social vulnerability to environmental hazards, drawing on 22 demographic variables, and normalized to 0-100 scale. <a href='http://artsandsciences.sc.edu/geog/hvri/faq' target='_blank'>More Info</a>"
+							values:[], vis:true, min:-5.019, max:7.150,  step:0.001, shfld:true,
+							info:"<b>Index of Social Vulnerability to Environmental Hazards</b><br>Index characterizing social vulnerability to environmental hazards, drawing on 22 demographic variables. At the national scale, values below -1 are considered low social vulnerability, -1 to +1 are medium, and above +1 are high. <a href='http://artsandsciences.sc.edu/geog/hvri/faq' target='_blank'>More Info</a>"
 						}
 					},
 					// huc 12 + restoration + 1 in 100 year flood
 					h12r2:{
 						Acres:{
 							values:[], vis:true, min:0, max:6000, gtmax:true,
-							info:"<b>Available floodplain area for given return interval and management action</b><br>Area of floodplain in ag or pasture land that could potentially be restored"
+							info:"<b>Available floodplain area for given flood frequency and management action</b><br>Area of floodplain in ag or pasture land that could potentially be restored"
 						}, 
 						ACCp:{
 							values:[], vis:true, min:0, max:100,
@@ -742,30 +705,26 @@ function ( 	declare ) {
 						}, 
 						popnow:{
 							values:[], vis:true, min:0, max:26, gtmax:true,
-							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
+							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in ag or pasture land that is in a floodplain of the selected flood frequency. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
 							values:[], vis:true, min:0, max:1501, gtmax:true,
-							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
+							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected flood frequency. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
 							values:[], vis:true, min:0, max:50000000, gtmax:true,
-							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
-						},
-						Damage_2:{
-							values:[], vis:true, min:0, max:500000, shfld:true,
-							info:"<b>Estimated Agricultural Losses From Flooding ($)</b><br>Estimate of agricultural losses to row crops (in USD) assuming a 100-year flood of 24-hour inundation duration occurring on June 1. For more information on the modeling approach, see ch. 6 of <a href='https://www.hec.usace.army.mil/software/hec-fia/documentation/CPD-81c,%20HEC-FIA%20Technical%20Reference%20Manual.pdf' target='_blank'>this document</a>."
+							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected flood frequency and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						SOVI:{
-							values:[], vis:true, min:0, max:100,
-							info:"<b>Index of Social Vulnerability to Environmental Hazards</b><br>Index characterizing social vulnerability to environmental hazards, drawing on 22 demographic variables, and normalized to 0-100 scale. <a href='http://artsandsciences.sc.edu/geog/hvri/faq' target='_blank'>More Info</a>"
+							values:[], vis:true, min:-5.019, max:7.150,  step:0.001, shfld:true,
+							info:"<b>Index of Social Vulnerability to Environmental Hazards</b><br>Index characterizing social vulnerability to environmental hazards, drawing on 22 demographic variables. At the national scale, values below -1 are considered low social vulnerability, -1 to +1 are medium, and above +1 are high. <a href='http://artsandsciences.sc.edu/geog/hvri/faq' target='_blank'>More Info</a>"
 						}
 					},
 					// huc 12 + restoration + 1 in 500 year flood
 					h12r3:{
 						Acres:{
 							values:[], vis:true, min:0, max:15000, gtmax:true,
-							info:"<b>Available floodplain area for given return interval and management action</b><br>Area of floodplain in ag or pasture land that could potentially be restored"
+							info:"<b>Available floodplain area for given flood frequency and management action</b><br>Area of floodplain in ag or pasture land that could potentially be restored"
 						}, 
 						ACCp:{
 							values:[], vis:true, min:0, max:100,
@@ -792,29 +751,26 @@ function ( 	declare ) {
 						}, 
 						popnow:{
 							values:[], vis:true, min:0, max:26, gtmax:true,
-							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
+							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in ag or pasture land that is in a floodplain of the selected flood frequency. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
 							values:[], vis:true, min:0, max:1501, gtmax:true,
-							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
+							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected flood frequency. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
 							values:[], vis:true, min:0, max:50000000, gtmax:true,
-							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
-						},
-						Damage_2:{
-							vis:false
-						},
+							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected flood frequency and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
+						},						
 						SOVI:{
-							values:[], vis:true, min:0, max:100,
-							info:"<b>Index of Social Vulnerability to Environmental Hazards</b><br>Index characterizing social vulnerability to environmental hazards, drawing on 22 demographic variables, and normalized to 0-100 scale. <a href='http://artsandsciences.sc.edu/geog/hvri/faq' target='_blank'>More Info</a>"
+							values:[], vis:true, min:-5.019, max:7.150,  step:0.001, shfld:true,
+							info:"<b>Index of Social Vulnerability to Environmental Hazards</b><br>Index characterizing social vulnerability to environmental hazards, drawing on 22 demographic variables. At the national scale, values below -1 are considered low social vulnerability, -1 to +1 are medium, and above +1 are high. <a href='http://artsandsciences.sc.edu/geog/hvri/faq' target='_blank'>More Info</a>"
 						}
 					},
 					// catchment + protection + 1 in 5 year flood
 					catchp1:{
 						Acres:{
 							values:[], vis:true, min:10, max:250, gtmax:true,
-							info:"<b>Available floodplain area for given return interval and management action</b><br>Area of floodplain in forest, wetland, or grassland that is not currently in protected status."
+							info:"<b>Available floodplain area for given flood frequency and management action</b><br>Area of floodplain in forest, wetland, or grassland that is not currently in protected status."
 						}, 
 						ACCp:{
 							values:[], vis:true, min:0, max:100,
@@ -826,7 +782,7 @@ function ( 	declare ) {
 						}, 
 						GDDsP:{
 							values:[], vis:true, min:0, max:100,
-							info:"<b>Growing degree days</b><br>Accumulated growing degree days for 2016-2017, normalized to a 0-100 scale. May be used in conjunction with &x22;local nutrient loading&x22; slider above to identify 5-year-floodplain with high loading and high growing degree days, i.e. high denitrification potential."
+							info:"<b>Growing degree days</b><br>Accumulated growing degree days for 2016-2017, normalized to a 0-100 scale. May be used in conjunction with &#x22;local nutrient loading&#x22; slider above to identify 5-year-floodplain with high loading and high growing degree days, i.e. high denitrification potential."
 						}, 
 						CPI:{
 							vis:false
@@ -841,29 +797,26 @@ function ( 	declare ) {
 						}, 
 						popnow:{
 							values:[], vis:true, min:1, max:11, gtmax:true,
-							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in forest/wetland floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
+							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in forest/wetland floodplain of the selected flood frequency. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
 							values:[], vis:true, min:1, max:501, gtmax:true,
-							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected return interval in 2050. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
+							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected flood frequency in 2050. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
 							values:[], vis:true, min:10000, max:350000, gtmax:true, 
-							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
-						},
-						Damage_2:{
-							vis:false
-						},
+							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected flood frequency and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
+						},						
 						SOVI:{
-							values:[], vis:true, min:0, max:100,
-							info:"<b>Index of Social Vulnerability to Environmental Hazards</b><br>Index characterizing social vulnerability to environmental hazards, drawing on 22 demographic variables, and normalized to 0-100 scale. <a href='http://artsandsciences.sc.edu/geog/hvri/faq' target='_blank'>More Info</a>"
+							values:[], vis:true, min:-7.051, max:8.536,  step:0.001, shfld:true,
+							info:"<b>Index of Social Vulnerability to Environmental Hazards</b><br>Index characterizing social vulnerability to environmental hazards, drawing on 22 demographic variables. At the national scale, values below -1 are considered low social vulnerability, -1 to +1 are medium, and above +1 are high. <a href='http://artsandsciences.sc.edu/geog/hvri/faq' target='_blank'>More Info</a>"
 						}
 					},
 					// catchment + protection + 1 in 100 year flood
 					catchp2:{
 						Acres:{
 							values:[], vis:true, min:10, max:250, gtmax:true,
-							info:"<b>Available floodplain area for given return interval and management action</b><br>Area of floodplain in forest, wetland, or grassland that is not currently in protected status."
+							info:"<b>Available floodplain area for given flood frequency and management action</b><br>Area of floodplain in forest, wetland, or grassland that is not currently in protected status."
 						}, 
 						ACCp:{
 							values:[], vis:true, min:0, max:100,
@@ -889,30 +842,26 @@ function ( 	declare ) {
 						}, 
 						popnow:{
 							values:[], vis:true, min:1, max:11, gtmax:true,
-							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in forest/wetland floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
+							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in forest/wetland floodplain of the selected flood frequency. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
 							values:[], vis:true, min:1, max:501, gtmax:true,
-							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected return interval in 2050. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
+							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected flood frequency in 2050. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
 							values:[], vis:true, min:10000, max:1000000, gtmax:true, 
-							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
-						},
-						Damage_2:{
-							values:[], vis:true, min:0, max:500000, shfld:true,
-							info:"<b>Estimated Agricultural Losses From Flooding ($)</b><br>Estimate of agricultural losses to row crops (in USD) assuming a 100-year flood of 24-hour inundation duration occurring on June 1. For more information on the modeling approach, see ch. 6 of <a href='https://www.hec.usace.army.mil/software/hec-fia/documentation/CPD-81c,%20HEC-FIA%20Technical%20Reference%20Manual.pdf' target='_blank'>this document</a>."
-						},
+							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected flood frequency and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
+						},						
 						SOVI:{
-							values:[], vis:true, min:0, max:100,
-							info:"<b>Index of Social Vulnerability to Environmental Hazards</b><br>Index characterizing social vulnerability to environmental hazards, drawing on 22 demographic variables, and normalized to 0-100 scale. <a href='http://artsandsciences.sc.edu/geog/hvri/faq' target='_blank'>More Info</a>"
+							values:[], vis:true, min:-7.051, max:8.536,  step:0.001, shfld:true,
+							info:"<b>Index of Social Vulnerability to Environmental Hazards</b><br>Index characterizing social vulnerability to environmental hazards, drawing on 22 demographic variables. At the national scale, values below -1 are considered low social vulnerability, -1 to +1 are medium, and above +1 are high. <a href='http://artsandsciences.sc.edu/geog/hvri/faq' target='_blank'>More Info</a>"
 						}
 					},
 					// catchment + protection + 1 in 500 year flood
 					catchp3:{
 						Acres:{
 							values:[], vis:true, min:10, max:250, gtmax:true,
-							info:"<b>Available floodplain area for given return interval and management action</b><br>Area of floodplain in forest, wetland, or grassland that is not currently in protected status."
+							info:"<b>Available floodplain area for given flood frequency and management action</b><br>Area of floodplain in forest, wetland, or grassland that is not currently in protected status."
 						}, 
 						ACCp:{
 							values:[], vis:true, min:0, max:100,
@@ -938,29 +887,26 @@ function ( 	declare ) {
 						}, 
 						popnow:{
 							values:[], vis:true, min:1, max:11, gtmax:true,
-							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in forest/wetland floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
+							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in forest/wetland floodplain of the selected flood frequency. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
 							values:[], vis:true, min:1, max:501, gtmax:true,
-							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected return interval in 2050. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
+							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected flood frequency in 2050. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
 							values:[], vis:true, min:10000, max:1000000, gtmax:true,
-							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
-						},
-						Damage_2:{
-							vis:false
-						},
+							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected flood frequency and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
+						},						
 						SOVI:{
-							values:[], vis:true, min:0, max:100,
-							info:"<b>Index of Social Vulnerability to Environmental Hazards</b><br>Index characterizing social vulnerability to environmental hazards, drawing on 22 demographic variables, and normalized to 0-100 scale. <a href='http://artsandsciences.sc.edu/geog/hvri/faq' target='_blank'>More Info</a>"
+							values:[], vis:true, min:-7.051, max:8.536,  step:0.001, shfld:true,
+							info:"<b>Index of Social Vulnerability to Environmental Hazards</b><br>Index characterizing social vulnerability to environmental hazards, drawing on 22 demographic variables. At the national scale, values below -1 are considered low social vulnerability, -1 to +1 are medium, and above +1 are high. <a href='http://artsandsciences.sc.edu/geog/hvri/faq' target='_blank'>More Info</a>"
 						}
 					},
 					// catchment + restoration + 1 in 5 year flood
 					catchr1:{
 						Acres:{
 							values:[], vis:true, min:10, max:250, gtmax:true,
-							info:"<b>Available floodplain area for given return interval and management action</b><br>Area of floodplain in ag or pasture land that could potentially be restored"
+							info:"<b>Available floodplain area for given flood frequency and management action</b><br>Area of floodplain in ag or pasture land that could potentially be restored"
 						}, 
 						ACCp:{
 							values:[], vis:true, min:0, max:100,
@@ -972,7 +918,7 @@ function ( 	declare ) {
 						}, 
 						GDDsP:{
 							values:[], vis:true, min:0, max:100,
-							info:"<b>Growing degree days</b><br>Accumulated growing degree days for 2016-2017, normalized to a 0-100 scale. May be used in conjunction with &x22;local nutrient loading&x22; slider above to identify 5-year-floodplain with high loading and high growing degree days, i.e. high denitrification potential."
+							info:"<b>Growing degree days</b><br>Accumulated growing degree days for 2016-2017, normalized to a 0-100 scale. May be used in conjunction with &#x22;local nutrient loading&#x22; slider above to identify 5-year-floodplain with high loading and high growing degree days, i.e. high denitrification potential."
 						}, 
 						CPI:{
 							values:[], vis:true, min:0, max:0.834, step:0.001,
@@ -988,29 +934,26 @@ function ( 	declare ) {
 						}, 
 						popnow:{
 							values:[], vis:true, min:1, max:11, gtmax:true,
-							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
+							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in ag or pasture land that is in a floodplain of the selected flood frequency. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
 							values:[], vis:true, min:1, max:501, gtmax:true,
-							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
+							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected flood frequency. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
 							values:[], vis:true, min:10000, max:200000, gtmax:true, 
-							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
-						},
-						Damage_2:{
-							vis:false
-						},
+							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected flood frequency and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
+						},						
 						SOVI:{
-							values:[], vis:true, min:0, max:100,
-							info:"<b>Index of Social Vulnerability to Environmental Hazards</b><br>Index characterizing social vulnerability to environmental hazards, drawing on 22 demographic variables, and normalized to 0-100 scale. <a href='http://artsandsciences.sc.edu/geog/hvri/faq' target='_blank'>More Info</a>"
+							values:[], vis:true, min:-7.051, max:8.536,  step:0.001, shfld:true,
+							info:"<b>Index of Social Vulnerability to Environmental Hazards</b><br>Index characterizing social vulnerability to environmental hazards, drawing on 22 demographic variables. At the national scale, values below -1 are considered low social vulnerability, -1 to +1 are medium, and above +1 are high. <a href='http://artsandsciences.sc.edu/geog/hvri/faq' target='_blank'>More Info</a>"
 						}
 					},
 					// catchment + restoration + 1 in 100 year flood
 					catchr2:{
 						Acres:{
 							values:[], vis:true, min:10, max:250, gtmax:true,
-							info:"<b>Available floodplain area for given return interval and management action</b><br>Area of floodplain in ag or pasture land that could potentially be restored"
+							info:"<b>Available floodplain area for given flood frequency and management action</b><br>Area of floodplain in ag or pasture land that could potentially be restored"
 						}, 
 						ACCp:{
 							values:[], vis:true, min:0, max:100,
@@ -1037,30 +980,26 @@ function ( 	declare ) {
 						}, 
 						popnow:{
 							values:[], vis:true, min:1, max:11, gtmax:true,
-							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
+							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in ag or pasture land that is in a floodplain of the selected flood frequency. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
 							values:[], vis:true, min:1, max:501, gtmax:true,
-							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
+							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected flood frequency. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
 							values:[], vis:true, min:10000, max:1000000, gtmax:true, 
-							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
-						},
-						Damage_2:{
-							values:[], vis:true, min:0, max:500000, shfld:true,
-							info:"<b>Estimated Agricultural Losses From Flooding ($)</b><br>Estimate of agricultural losses to row crops (in USD) assuming a 100-year flood of 24-hour inundation duration occurring on June 1. For more information on the modeling approach, see ch. 6 of <a href='https://www.hec.usace.army.mil/software/hec-fia/documentation/CPD-81c,%20HEC-FIA%20Technical%20Reference%20Manual.pdf' target='_blank'>this document</a>."
+							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected flood frequency and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						SOVI:{
-							values:[], vis:true, min:0, max:100,
-							info:"<b>Index of Social Vulnerability to Environmental Hazards</b><br>Index characterizing social vulnerability to environmental hazards, drawing on 22 demographic variables, and normalized to 0-100 scale. <a href='http://artsandsciences.sc.edu/geog/hvri/faq' target='_blank'>More Info</a>"
+							values:[], vis:true, min:-7.051, max:8.536,  step:0.001, shfld:true,
+							info:"<b>Index of Social Vulnerability to Environmental Hazards</b><br>Index characterizing social vulnerability to environmental hazards, drawing on 22 demographic variables. At the national scale, values below -1 are considered low social vulnerability, -1 to +1 are medium, and above +1 are high. <a href='http://artsandsciences.sc.edu/geog/hvri/faq' target='_blank'>More Info</a>"
 						}
 					},
 					// catchment + restoration + 1 in 500 year flood
 					catchr3:{
 						Acres:{
 							values:[], vis:true, min:10, max:250, gtmax:true,
-							info:"<b>Available floodplain area for given return interval and management action</b><br>Area of floodplain in ag or pasture land that could potentially be restored"
+							info:"<b>Available floodplain area for given flood frequency and management action</b><br>Area of floodplain in ag or pasture land that could potentially be restored"
 						}, 
 						ACCp:{
 							values:[], vis:true, min:0, max:100,
@@ -1087,22 +1026,19 @@ function ( 	declare ) {
 						}, 
 						popnow:{
 							values:[], vis:true, min:1, max:11, gtmax:true,
-							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
+							info:"<b>Population Exposed to Floods (Present-Day)</b><br>People currently living in ag or pasture land that is in a floodplain of the selected flood frequency. <a href='https://www.epa.gov/enviroatlas/dasymetric-toolbox' target='_blank'>More Info</a>"
 						}, 
 						pop2050:{
 							values:[], vis:true, min:1, max:501, gtmax:true,
-							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected return interval. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
+							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected flood frequency. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
 							values:[], vis:true, min:10000, max:1000000, gtmax:true, 
-							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected return interval and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
-						},
-						Damage_2:{
-							vis:false
-						},
+							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected flood frequency and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
+						},						
 						SOVI:{
-							values:[], vis:true, min:0, max:100,
-							info:"<b>Index of Social Vulnerability to Environmental Hazards</b><br>Index characterizing social vulnerability to environmental hazards, drawing on 22 demographic variables, and normalized to 0-100 scale. <a href='http://artsandsciences.sc.edu/geog/hvri/faq' target='_blank'>More Info</a>"
+							values:[], vis:true, min:-7.051, max:8.536,  step:0.001, shfld:true,
+							info:"<b>Index of Social Vulnerability to Environmental Hazards</b><br>Index characterizing social vulnerability to environmental hazards, drawing on 22 demographic variables. At the national scale, values below -1 are considered low social vulnerability, -1 to +1 are medium, and above +1 are high. <a href='http://artsandsciences.sc.edu/geog/hvri/faq' target='_blank'>More Info</a>"
 						}
 					}
 				}
@@ -1123,7 +1059,7 @@ function ( 	declare ) {
 						}, 
 						ABCcorr:{
 							vis:true,shfld:true,
-							info:"<b>American Bird Conservancy Corridors & Key Habitat Bird Areas</b><br>Corridors represent where bird risk differs season to season & key habitat areas are for birds on the Red WatchList. <a href='https://www.sciencebase.gov/catalog/item/58497c09e4b06d80b7b09483' target='_blank'>More Info</a>"
+							info:"<b>American Bird Conservancy Corridors & Key Habitat Bird Areas</b><br>This layer represents key bird migration corridors and habitat for birds on the Red WatchList. <a href='https://www.sciencebase.gov/catalog/item/58497c09e4b06d80b7b09483' target='_blank'>More Info</a>"
 						} 
 					},
 					h8p2:{
@@ -1141,7 +1077,7 @@ function ( 	declare ) {
 						}, 
 						ABCcorr:{
 							vis:true,shfld:true,
-							info:"<b>American Bird Conservancy Corridors & Key Habitat Bird Areas</b><br>Corridors represent where bird risk differs season to season & key habitat areas are for birds on the Red WatchList. <a href='https://www.sciencebase.gov/catalog/item/58497c09e4b06d80b7b09483' target='_blank'>More Info</a>"
+							info:"<b>American Bird Conservancy Corridors & Key Habitat Bird Areas</b><br>This layer represents key bird migration corridors and habitat for birds on the Red WatchList. <a href='https://www.sciencebase.gov/catalog/item/58497c09e4b06d80b7b09483' target='_blank'>More Info</a>"
 						}
 					},
 					h8p3:{
@@ -1159,7 +1095,7 @@ function ( 	declare ) {
 						}, 
 						ABCcorr:{
 							vis:true,shfld:true,
-							info:"<b>American Bird Conservancy Corridors & Key Habitat Bird Areas</b><br>Corridors represent where bird risk differs season to season & key habitat areas are for birds on the Red WatchList. <a href='https://www.sciencebase.gov/catalog/item/58497c09e4b06d80b7b09483' target='_blank'>More Info</a>"
+							info:"<b>American Bird Conservancy Corridors & Key Habitat Bird Areas</b><br>This layer represents key bird migration corridors and habitat for birds on the Red WatchList. <a href='https://www.sciencebase.gov/catalog/item/58497c09e4b06d80b7b09483' target='_blank'>More Info</a>"
 						}
 					},
 					h8r1:{
@@ -1177,7 +1113,7 @@ function ( 	declare ) {
 						}, 
 						ABCcorr:{
 							vis:true,shfld:true,
-							info:"<b>American Bird Conservancy Corridors & Key Habitat Bird Areas</b><br>Corridors represent where bird risk differs season to season & key habitat areas are for birds on the Red WatchList. <a href='https://www.sciencebase.gov/catalog/item/58497c09e4b06d80b7b09483' target='_blank'>More Info</a>"
+							info:"<b>American Bird Conservancy Corridors & Key Habitat Bird Areas</b><br>This layer represents key bird migration corridors and habitat for birds on the Red WatchList. <a href='https://www.sciencebase.gov/catalog/item/58497c09e4b06d80b7b09483' target='_blank'>More Info</a>"
 						}
 					},
 					h8r2:{
@@ -1195,7 +1131,7 @@ function ( 	declare ) {
 						}, 
 						ABCcorr:{
 							vis:true,shfld:true,
-							info:"<b>American Bird Conservancy Corridors & Key Habitat Bird Areas</b><br>Corridors represent where bird risk differs season to season & key habitat areas are for birds on the Red WatchList. <a href='https://www.sciencebase.gov/catalog/item/58497c09e4b06d80b7b09483' target='_blank'>More Info</a>"
+							info:"<b>American Bird Conservancy Corridors & Key Habitat Bird Areas</b><br>This layer represents key bird migration corridors and habitat for birds on the Red WatchList. <a href='https://www.sciencebase.gov/catalog/item/58497c09e4b06d80b7b09483' target='_blank'>More Info</a>"
 						}
 					},
 					h8r3:{
@@ -1213,7 +1149,7 @@ function ( 	declare ) {
 						}, 
 						ABCcorr:{
 							vis:true,shfld:true,
-							info:"<b>American Bird Conservancy Corridors & Key Habitat Bird Areas</b><br>Corridors represent where bird risk differs season to season & key habitat areas are for birds on the Red WatchList. <a href='https://www.sciencebase.gov/catalog/item/58497c09e4b06d80b7b09483' target='_blank'>More Info</a>"
+							info:"<b>American Bird Conservancy Corridors & Key Habitat Bird Areas</b><br>This layer represents key bird migration corridors and habitat for birds on the Red WatchList. <a href='https://www.sciencebase.gov/catalog/item/58497c09e4b06d80b7b09483' target='_blank'>More Info</a>"
 						}
 					},
 					h12p1:{
@@ -1231,7 +1167,7 @@ function ( 	declare ) {
 						}, 
 						ABCcorr:{
 							vis:true,shfld:true,
-							info:"<b>American Bird Conservancy Corridors & Key Habitat Bird Areas</b><br>Corridors represent where bird risk differs season to season & key habitat areas are for birds on the Red WatchList. <a href='https://www.sciencebase.gov/catalog/item/58497c09e4b06d80b7b09483' target='_blank'>More Info</a>"
+							info:"<b>American Bird Conservancy Corridors & Key Habitat Bird Areas</b><br>This layer represents key bird migration corridors and habitat for birds on the Red WatchList. <a href='https://www.sciencebase.gov/catalog/item/58497c09e4b06d80b7b09483' target='_blank'>More Info</a>"
 						}
 					},
 					h12p2:{
@@ -1249,7 +1185,7 @@ function ( 	declare ) {
 						}, 
 						ABCcorr:{
 							vis:true,shfld:true,
-							info:"<b>American Bird Conservancy Corridors & Key Habitat Bird Areas</b><br>Corridors represent where bird risk differs season to season & key habitat areas are for birds on the Red WatchList. <a href='https://www.sciencebase.gov/catalog/item/58497c09e4b06d80b7b09483' target='_blank'>More Info</a>"
+							info:"<b>American Bird Conservancy Corridors & Key Habitat Bird Areas</b><br>This layer represents key bird migration corridors and habitat for birds on the Red WatchList. <a href='https://www.sciencebase.gov/catalog/item/58497c09e4b06d80b7b09483' target='_blank'>More Info</a>"
 						}
 					},
 					h12p3:{
@@ -1267,7 +1203,7 @@ function ( 	declare ) {
 						}, 
 						ABCcorr:{
 							vis:true,shfld:true,
-							info:"<b>American Bird Conservancy Corridors & Key Habitat Bird Areas</b><br>Corridors represent where bird risk differs season to season & key habitat areas are for birds on the Red WatchList. <a href='https://www.sciencebase.gov/catalog/item/58497c09e4b06d80b7b09483' target='_blank'>More Info</a>"
+							info:"<b>American Bird Conservancy Corridors & Key Habitat Bird Areas</b><br>This layer represents key bird migration corridors and habitat for birds on the Red WatchList. <a href='https://www.sciencebase.gov/catalog/item/58497c09e4b06d80b7b09483' target='_blank'>More Info</a>"
 						}	
 					},
 					h12r1:{
@@ -1285,7 +1221,7 @@ function ( 	declare ) {
 						}, 
 						ABCcorr:{
 							vis:true,shfld:true,
-							info:"<b>American Bird Conservancy Corridors & Key Habitat Bird Areas</b><br>Corridors represent where bird risk differs season to season & key habitat areas are for birds on the Red WatchList. <a href='https://www.sciencebase.gov/catalog/item/58497c09e4b06d80b7b09483' target='_blank'>More Info</a>"
+							info:"<b>American Bird Conservancy Corridors & Key Habitat Bird Areas</b><br>This layer represents key bird migration corridors and habitat for birds on the Red WatchList. <a href='https://www.sciencebase.gov/catalog/item/58497c09e4b06d80b7b09483' target='_blank'>More Info</a>"
 						}
 					},
 					h12r2:{
@@ -1303,7 +1239,7 @@ function ( 	declare ) {
 						}, 
 						ABCcorr:{
 							vis:true,shfld:true,
-							info:"<b>American Bird Conservancy Corridors & Key Habitat Bird Areas</b><br>Corridors represent where bird risk differs season to season & key habitat areas are for birds on the Red WatchList. <a href='https://www.sciencebase.gov/catalog/item/58497c09e4b06d80b7b09483' target='_blank'>More Info</a>"
+							info:"<b>American Bird Conservancy Corridors & Key Habitat Bird Areas</b><br>This layer represents key bird migration corridors and habitat for birds on the Red WatchList. <a href='https://www.sciencebase.gov/catalog/item/58497c09e4b06d80b7b09483' target='_blank'>More Info</a>"
 						}
 					},
 					h12r3:{
@@ -1321,7 +1257,7 @@ function ( 	declare ) {
 						}, 
 						ABCcorr:{
 							vis:true,shfld:true,
-							info:"<b>American Bird Conservancy Corridors & Key Habitat Bird Areas</b><br>Corridors represent where bird risk differs season to season & key habitat areas are for birds on the Red WatchList. <a href='https://www.sciencebase.gov/catalog/item/58497c09e4b06d80b7b09483' target='_blank'>More Info</a>"
+							info:"<b>American Bird Conservancy Corridors & Key Habitat Bird Areas</b><br>This layer represents key bird migration corridors and habitat for birds on the Red WatchList. <a href='https://www.sciencebase.gov/catalog/item/58497c09e4b06d80b7b09483' target='_blank'>More Info</a>"
 						}
 					},
 					catchp1:{
@@ -1339,7 +1275,7 @@ function ( 	declare ) {
 						}, 
 						ABCcorr:{
 							vis:true,shfld:true,
-							info:"<b>American Bird Conservancy Corridors & Key Habitat Bird Areas</b><br>Corridors represent where bird risk differs season to season & key habitat areas are for birds on the Red WatchList. <a href='https://www.sciencebase.gov/catalog/item/58497c09e4b06d80b7b09483' target='_blank'>More Info</a>"
+							info:"<b>American Bird Conservancy Corridors & Key Habitat Bird Areas</b><br>This layer represents key bird migration corridors and habitat for birds on the Red WatchList. <a href='https://www.sciencebase.gov/catalog/item/58497c09e4b06d80b7b09483' target='_blank'>More Info</a>"
 						}
 					},
 					catchp2:{
@@ -1357,7 +1293,7 @@ function ( 	declare ) {
 						}, 
 						ABCcorr:{
 							vis:true,shfld:true,
-							info:"<b>American Bird Conservancy Corridors & Key Habitat Bird Areas</b><br>Corridors represent where bird risk differs season to season & key habitat areas are for birds on the Red WatchList. <a href='https://www.sciencebase.gov/catalog/item/58497c09e4b06d80b7b09483' target='_blank'>More Info</a>"
+							info:"<b>American Bird Conservancy Corridors & Key Habitat Bird Areas</b><br>This layer represents key bird migration corridors and habitat for birds on the Red WatchList. <a href='https://www.sciencebase.gov/catalog/item/58497c09e4b06d80b7b09483' target='_blank'>More Info</a>"
 						}
 					},
 					catchp3:{
@@ -1375,7 +1311,7 @@ function ( 	declare ) {
 						}, 
 						ABCcorr:{
 							vis:true,shfld:true,
-							info:"<b>American Bird Conservancy Corridors & Key Habitat Bird Areas</b><br>Corridors represent where bird risk differs season to season & key habitat areas are for birds on the Red WatchList. <a href='https://www.sciencebase.gov/catalog/item/58497c09e4b06d80b7b09483' target='_blank'>More Info</a>"
+							info:"<b>American Bird Conservancy Corridors & Key Habitat Bird Areas</b><br>This layer represents key bird migration corridors and habitat for birds on the Red WatchList. <a href='https://www.sciencebase.gov/catalog/item/58497c09e4b06d80b7b09483' target='_blank'>More Info</a>"
 						}
 					},
 					catchr1:{
@@ -1393,7 +1329,7 @@ function ( 	declare ) {
 						}, 
 						ABCcorr:{
 							vis:true,shfld:true,
-							info:"<b>American Bird Conservancy Corridors & Key Habitat Bird Areas</b><br>Corridors represent where bird risk differs season to season & key habitat areas are for birds on the Red WatchList. <a href='https://www.sciencebase.gov/catalog/item/58497c09e4b06d80b7b09483' target='_blank'>More Info</a>"
+							info:"<b>American Bird Conservancy Corridors & Key Habitat Bird Areas</b><br>This layer represents key bird migration corridors and habitat for birds on the Red WatchList. <a href='https://www.sciencebase.gov/catalog/item/58497c09e4b06d80b7b09483' target='_blank'>More Info</a>"
 						}
 					},
 					catchr2:{
@@ -1411,7 +1347,7 @@ function ( 	declare ) {
 						}, 
 						ABCcorr:{
 							vis:true,shfld:true,
-							info:"<b>American Bird Conservancy Corridors & Key Habitat Bird Areas</b><br>Corridors represent where bird risk differs season to season & key habitat areas are for birds on the Red WatchList. <a href='https://www.sciencebase.gov/catalog/item/58497c09e4b06d80b7b09483' target='_blank'>More Info</a>"
+							info:"<b>American Bird Conservancy Corridors & Key Habitat Bird Areas</b><br>This layer represents key bird migration corridors and habitat for birds on the Red WatchList. <a href='https://www.sciencebase.gov/catalog/item/58497c09e4b06d80b7b09483' target='_blank'>More Info</a>"
 						}
 					},
 					catchr3:{
@@ -1429,7 +1365,7 @@ function ( 	declare ) {
 						}, 
 						ABCcorr:{
 							vis:true,shfld:true,
-							info:"<b>American Bird Conservancy Corridors & Key Habitat Bird Areas</b><br>Corridors represent where bird risk differs season to season & key habitat areas are for birds on the Red WatchList. <a href='https://www.sciencebase.gov/catalog/item/58497c09e4b06d80b7b09483' target='_blank'>More Info</a>"
+							info:"<b>American Bird Conservancy Corridors & Key Habitat Bird Areas</b><br>This layer represents key bird migration corridors and habitat for birds on the Red WatchList. <a href='https://www.sciencebase.gov/catalog/item/58497c09e4b06d80b7b09483' target='_blank'>More Info</a>"
 						}
 					}
 				}
