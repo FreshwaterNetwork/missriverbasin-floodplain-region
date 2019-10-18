@@ -769,7 +769,7 @@ function ( 	declare ) {
 					// catchment + protection + 1 in 5 year flood
 					catchp1:{
 						Acres:{
-							values:[], vis:true, min:10, max:250, gtmax:true,
+							values:[], vis:true, min:0, max:250, gtmax:true,
 							info:"<b>Available floodplain area for given flood frequency and management action</b><br>Area of floodplain in forest, wetland, or grassland that is not currently in protected status."
 						}, 
 						ACCp:{
@@ -804,7 +804,7 @@ function ( 	declare ) {
 							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected flood frequency in 2050. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
-							values:[], vis:true, min:10000, max:350000, gtmax:true, 
+							values:[], vis:true, min:0, max:350000, gtmax:true, 
 							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected flood frequency and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},						
 						SOVI:{
@@ -815,7 +815,7 @@ function ( 	declare ) {
 					// catchment + protection + 1 in 100 year flood
 					catchp2:{
 						Acres:{
-							values:[], vis:true, min:10, max:250, gtmax:true,
+							values:[], vis:true, min:0, max:250, gtmax:true,
 							info:"<b>Available floodplain area for given flood frequency and management action</b><br>Area of floodplain in forest, wetland, or grassland that is not currently in protected status."
 						}, 
 						ACCp:{
@@ -849,7 +849,7 @@ function ( 	declare ) {
 							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected flood frequency in 2050. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
-							values:[], vis:true, min:10000, max:1000000, gtmax:true, 
+							values:[], vis:true, min:0, max:1000000, gtmax:true, 
 							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected flood frequency and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},						
 						SOVI:{
@@ -860,7 +860,7 @@ function ( 	declare ) {
 					// catchment + protection + 1 in 500 year flood
 					catchp3:{
 						Acres:{
-							values:[], vis:true, min:10, max:250, gtmax:true,
+							values:[], vis:true, min:0, max:250, gtmax:true,
 							info:"<b>Available floodplain area for given flood frequency and management action</b><br>Area of floodplain in forest, wetland, or grassland that is not currently in protected status."
 						}, 
 						ACCp:{
@@ -894,7 +894,7 @@ function ( 	declare ) {
 							info:"<b>Population Exposed to Floods (2050)</b><br>People expected to be living in forest/wetland/grassland floodplain of the selected flood frequency in 2050. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
-							values:[], vis:true, min:10000, max:1000000, gtmax:true,
+							values:[], vis:true, min:0, max:1000000, gtmax:true,
 							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected flood frequency and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},						
 						SOVI:{
@@ -905,7 +905,7 @@ function ( 	declare ) {
 					// catchment + restoration + 1 in 5 year flood
 					catchr1:{
 						Acres:{
-							values:[], vis:true, min:10, max:250, gtmax:true,
+							values:[], vis:true, min:0, max:250, gtmax:true,
 							info:"<b>Available floodplain area for given flood frequency and management action</b><br>Area of floodplain in ag or pasture land that could potentially be restored"
 						}, 
 						ACCp:{
@@ -941,7 +941,7 @@ function ( 	declare ) {
 							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected flood frequency. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
-							values:[], vis:true, min:10000, max:200000, gtmax:true, 
+							values:[], vis:true, min:0, max:200000, gtmax:true, 
 							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected flood frequency and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},						
 						SOVI:{
@@ -952,7 +952,7 @@ function ( 	declare ) {
 					// catchment + restoration + 1 in 100 year flood
 					catchr2:{
 						Acres:{
-							values:[], vis:true, min:10, max:250, gtmax:true,
+							values:[], vis:true, min:0, max:250, gtmax:true,
 							info:"<b>Available floodplain area for given flood frequency and management action</b><br>Area of floodplain in ag or pasture land that could potentially be restored"
 						}, 
 						ACCp:{
@@ -987,7 +987,7 @@ function ( 	declare ) {
 							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected flood frequency. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
-							values:[], vis:true, min:10000, max:1000000, gtmax:true, 
+							values:[], vis:true, min:0, max:1000000, gtmax:true, 
 							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected flood frequency and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						SOVI:{
@@ -998,7 +998,7 @@ function ( 	declare ) {
 					// catchment + restoration + 1 in 500 year flood
 					catchr3:{
 						Acres:{
-							values:[], vis:true, min:10, max:250, gtmax:true,
+							values:[], vis:true, min:0, max:250, gtmax:true,
 							info:"<b>Available floodplain area for given flood frequency and management action</b><br>Area of floodplain in ag or pasture land that could potentially be restored"
 						}, 
 						ACCp:{
@@ -1033,7 +1033,7 @@ function ( 	declare ) {
 							info:"<b>Population exposed to floods (2050)</b><br>People expected in 2050 to be living in ag or pasture land that is in a floodplain of the selected flood frequency. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},
 						P2_2050:{
-							values:[], vis:true, min:10000, max:1000000, gtmax:true, 
+							values:[], vis:true, min:0, max:1000000, gtmax:true, 
 							info:"<b>Potential Future Flood Damages to Structures (2050) ($)</b><br>Estimate of property damage in the floodplain corresponding to the selected flood frequency and management action, given flood depth and projected 2050 land use / building type. <a href='https://iopscience.iop.org/article/10.1088/1748-9326/aaac65' target='_blank'>More Info</a>"
 						},						
 						SOVI:{
@@ -1384,7 +1384,7 @@ function ( 	declare ) {
 				}
 				// Enable or disable button and show or hide text based on map scale
 				t.map.on("zoom-end",function(z){
-					if ( t.map.getScale() > 125000){
+					if ( t.map.getScale() > 144448){
 						$("#" + t.id + "-catch").prop("disabled", true)
 						$(`#${t.id}catch-text`).show();
 					}else{
